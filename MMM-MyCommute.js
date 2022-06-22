@@ -11,6 +11,12 @@
 
 	MIT Licensed
 
+	// Using https://docs.traveltime.com/api/start/routes
+	app id 2a6adfe5
+	api key 469682f33e8b9ab1302352fead80533a
+	// https://positionstack.com/
+	api key 2c1b016dca74c2f45ccaa50d3e9f06db
+
 *********************************/
 
 /* global config, Module, Log, moment */
