@@ -17,6 +17,37 @@
 	// https://positionstack.com/
 	api key 2c1b016dca74c2f45ccaa50d3e9f06db
 
+	// this seems to come straight from google api payload
+	this.predictions = [
+		{
+			routes: [
+				{
+					transitInfo: [
+						{
+							vehicle: string?,
+							routeLabel: string?,
+							arrivalTime: timeString?,
+						},
+						{}
+					],
+					summary: string?,
+					time: float?,
+					timeInTraffic: float?,
+				},
+				{}
+			],
+			config: {
+				mode: 'driving',
+				showError: false,
+				label: 'Air Canada Centre',
+				transitMode: 'transitIcon|something'
+			},
+			error: WHAT?,
+			error_msg: string?,
+		},
+		{}
+	]
+
 *********************************/
 
 /* global config, Module, Log, moment */
