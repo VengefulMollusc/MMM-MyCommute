@@ -16,7 +16,7 @@ module.exports = NodeHelper.create({
 
 	// subclass socketNotificationReceived
 	socketNotificationReceived: function (notification, payload) {
-		if (notification === "GOOGLE_TRAFFIC_GET") {
+		if (notification === "BING_TRAFFIC_GET") {
 			//first data pull after new config
 			this.getPredictions(payload);
 		}
@@ -38,40 +38,45 @@ module.exports = NodeHelper.create({
 						console.log("MMM-MyCommute: " + data.error_message);
 						prediction.error = true;
 						prediction.error_msg = data.error_message;
-					} else if (data.status !== "OK") {
-						console.log("MMM-MyCommute: " + data.status);
+					} else if (data.statusDescription !== "OK") {
+						console.log("MMM-MyCommute: " + data.statusDescription);
 						console.debug(data);
 						prediction.error = true;
-						prediction.error_msg = "data.status != OK: " + data.status;
+						prediction.error_msg = "data.status != OK: " + data.statusDescription;
 					} else {
 						const routeList = [];
-						for (let i = 0; i < data.routes.length; i++) {
-							const r = data.routes[i];
+						for (let i = 0; i < data.resourceSets[0].resources.length; i++) {
+							const r = data.resourceSets[0].resources[i];
 							const routeObj = new Object({
-								summary: r.summary,
-								time: r.legs[0].duration.value
+								summary: r.distanceUnit, // TODO: figure out what this should be
+								time: r.travelDuration,
 							});
 
-							if (r.legs[0].duration_in_traffic) {
-								routeObj.timeInTraffic = r.legs[0].duration_in_traffic.value;
+							if (dest.config.mode && dest.config.mode === "Driving") {
+								routeObj.timeInTraffic = r.travelDurationTraffic;
 							}
-							if (dest.config.mode && dest.config.mode === "transit") {
+							if (dest.config.mode && dest.config.mode === "Transit") {
 								const transitInfo = [];
 								let gotFirstTransitLeg = false;
-								for (let j = 0; j < r.legs[0].steps.length; j++) {
-									const s = r.legs[0].steps[j];
-									if (s.transit_details) {
+								for (let j = 0; j < r.routeLegs[0].itineraryItems.length; j++) {
+									const s = r.routeLegs[0].itineraryItems[j];
+									if (s.instruction.maneuverType === "TakeTransit") {
 										let arrivalTime = "";
 										if (!gotFirstTransitLeg && dest.config.showNextVehicleDeparture) {
 											gotFirstTransitLeg = true;
-											arrivalTime = moment(s.transit_details.departure_time.value * 1000);
+											// arrivalTime = moment(s.childItineraryItems[0].time * 1000);
+											arrivalTime = new Date(parseInt(s.childItineraryItems[0].time.substr(6)));
 										}
-										transitInfo.push({routeLabel: s.transit_details.line.short_name ? s.transit_details.line.short_name : s.transit_details.line.name, vehicle: s.transit_details.line.vehicle.type, arrivalTime: arrivalTime});
+										transitInfo.push({
+											routeLabel: s.instruction.text ? s.instruction.text : s.instruction.maneuverType, 
+											vehicle: s.iconType, 
+											arrivalTime: arrivalTime
+										});
 									}
 								}
 								routeObj.transitInfo = transitInfo;
 								if (transitInfo.length <= 0) {
-									const travelModes = r.legs[0].steps.map(s => s.travel_mode).join(", ");
+									const travelModes = r.routeLegs[0].itineraryItems.map(s => s.iconType).join(", ");
 									console.log("MMM-MyCommute: transit directrions does not contain any transits (" + travelModes + ")");
 									prediction.error = true;
 									prediction.error_msg = "MMM-MyCommute: transit directrions does not contain any transits (" + travelModes + ")";
@@ -79,6 +84,40 @@ module.exports = NodeHelper.create({
 							}
 							routeList.push(routeObj);
 						}
+						// for (let i = 0; i < data.routes.length; i++) {
+						// 	const r = data.routes[i];
+						// 	const routeObj = new Object({
+						// 		summary: r.summary,
+						// 		time: r.legs[0].duration.value
+						// 	});
+
+						// 	if (r.legs[0].duration_in_traffic) {
+						// 		routeObj.timeInTraffic = r.legs[0].duration_in_traffic.value;
+						// 	}
+						// 	if (dest.config.mode && dest.config.mode === "transit") {
+						// 		const transitInfo = [];
+						// 		let gotFirstTransitLeg = false;
+						// 		for (let j = 0; j < r.legs[0].steps.length; j++) {
+						// 			const s = r.legs[0].steps[j];
+						// 			if (s.transit_details) {
+						// 				let arrivalTime = "";
+						// 				if (!gotFirstTransitLeg && dest.config.showNextVehicleDeparture) {
+						// 					gotFirstTransitLeg = true;
+						// 					arrivalTime = moment(s.transit_details.departure_time.value * 1000);
+						// 				}
+						// 				transitInfo.push({routeLabel: s.transit_details.line.short_name ? s.transit_details.line.short_name : s.transit_details.line.name, vehicle: s.transit_details.line.vehicle.type, arrivalTime: arrivalTime});
+						// 			}
+						// 		}
+						// 		routeObj.transitInfo = transitInfo;
+						// 		if (transitInfo.length <= 0) {
+						// 			const travelModes = r.legs[0].steps.map(s => s.travel_mode).join(", ");
+						// 			console.log("MMM-MyCommute: transit directrions does not contain any transits (" + travelModes + ")");
+						// 			prediction.error = true;
+						// 			prediction.error_msg = "MMM-MyCommute: transit directrions does not contain any transits (" + travelModes + ")";
+						// 		}
+						// 	}
+						// 	routeList.push(routeObj);
+						// }
 						prediction.routes = routeList;
 					}
 				} else {
@@ -95,7 +134,7 @@ module.exports = NodeHelper.create({
 				returned++;
 
 				if (returned === payload.destinations.length) {
-					self.sendSocketNotification("GOOGLE_TRAFFIC_RESPONSE" + payload.instanceId, predictions);
+					self.sendSocketNotification("BING_TRAFFIC_RESPONSE" + payload.instanceId, predictions);
 				}
 			});
 		});

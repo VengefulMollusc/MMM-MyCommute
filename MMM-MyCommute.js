@@ -123,26 +123,25 @@ Module.register("MMM-MyCommute", {
 	},
 
 	travelModes: [
-		"driving",
-		"walking",
-		"bicycling",
-		"transit"
+		"Driving",
+		"Walking",
+		"Transit"
 	],
 
-	transitModes: [
-		"bus",
-		"subway",
-		"train",
-		"tram",
-		"rail"
-	],
+	// transitModes: [
+	// 	"bus",
+	// 	"subway",
+	// 	"train",
+	// 	"tram",
+	// 	"rail"
+	// ],
 
-	avoidOptions: [
-		"tolls",
-		"highways",
-		"ferries",
-		"indoor"
-	],
+	// avoidOptions: [
+	// 	"tolls",
+	// 	"highways",
+	// 	"ferries",
+	// 	"indoor"
+	// ],
 
 	// Icons to use for each transportation mode
 	symbols: {
@@ -167,7 +166,16 @@ Module.register("MMM-MyCommute", {
 		"cable_car":        "gondola",
 		"gondola_lift":     "gondola",
 		"funicular":        "gondola",
-		"other":            "streetcar"
+		"other":            "streetcar",
+
+		"None":             "streetcar",
+		"Airline":          "streetcar",
+		"Auto":             "car",
+		"Bus":              "bus",
+		"Ferry":            "boat",
+		"Train":            "train",
+		"Walk":             "walk",
+		"Other":            "streetcar",
 	},
 
 	start: function() {
@@ -281,7 +289,7 @@ Module.register("MMM-MyCommute", {
 					this.config.calendarOptions.map( calOpt => Object.assign({}, calOpt, {
 						label: this.trimCalendarLabel(calendarEvent.title, calOpt.maxLabelLength),
 						destination: calendarEvent.location,
-						arrival_time: calendarEvent.startDate / 1000,
+						arrival_time: calendarEvent.startDate / 1000, // TODO:: convert tobing time if needed
 						color: calendarEvent.color
 					}))
 				);
@@ -315,14 +323,14 @@ Module.register("MMM-MyCommute", {
 				const destHideDays = d.hideDays || [];
 
 				if (this.isInWindow(destStartTime, destEndTime, destHideDays)) {
-					const url = "https://maps.googleapis.com/maps/api/directions/json" + this.getParams(d);
+					const url = "http://dev.virtualearth.net/REST/v1/Routes/" + this.getParams(d);
 					destinationGetInfo.push({ url:url, config: d});
 				}
 			}
 			this.inWindow = true;
 
 			if (destinationGetInfo.length > 0) {
-				this.sendSocketNotification("GOOGLE_TRAFFIC_GET", {destinations: destinationGetInfo, instanceId: this.identifier});
+				this.sendSocketNotification("BING_TRAFFIC_GET", {destinations: destinationGetInfo, instanceId: this.identifier});
 			} else {
 				this.hide(1000, {lockString: this.identifier});
 				this.inWindow = false;
@@ -339,63 +347,81 @@ Module.register("MMM-MyCommute", {
 
 	getParams: function(dest) {
 
-		let params = "?";
-		params += "origin=" + encodeURIComponent(dest.origin || this.config.origin);
-		params += "&destination=" + encodeURIComponent(dest.destination);
-		params += "&key=" + (this.config.apiKey || this.config.apikey);
-		params += "&language=" + this.config.lang;
-
 		//travel mode
-		let mode = "driving";
+		let mode = "Driving";
 		if (dest.mode && this.travelModes.indexOf(dest.mode) !== -1) {
 			mode = dest.mode;
 		}
-		params += "&mode=" + mode;
+		let params = mode + "?";
 
-		//transit mode if travelMode = "transit"
-		if (mode === "transit" && dest.transitMode) {
-			const tModes = dest.transitMode.split("|");
-			let sanitizedTransitModes = "";
-			for (let i = 0; i < tModes.length; i++) {
-				if (this.transitModes.indexOf(tModes[i]) !== -1) {
-					sanitizedTransitModes += (sanitizedTransitModes === "" ? tModes[i] : "|" + tModes[i]);
-				}
-			}
-			if (sanitizedTransitModes.length > 0) {
-				params += "&transit_mode=" + sanitizedTransitModes;
-			}
-		}
-
-		if (dest.waypoints) {
-			const waypoints = dest.waypoints.split("|");
-			for (let i = 0; i < waypoints.length; i++) {
-				waypoints[i] = "via:" + encodeURIComponent(waypoints[i]);
-			}
-			params += "&waypoints=" + waypoints.join("|");
-		}
-
-		//avoid
-		if (dest.avoid) {
-			const a = dest.avoid.split("|");
-			let sanitizedAvoidOptions = "";
-			for (let i = 0; i < a.length; i++) {
-				if (this.avoidOptions.indexOf(a[i]) !== -1) {
-					sanitizedAvoidOptions += (sanitizedAvoidOptions === "" ? a[i] : "|" + a[i]);
-				}
-			}
-			if (sanitizedAvoidOptions.length > 0) {
-				params += "&avoid=" + sanitizedAvoidOptions;
-			}
-		}
-		if (dest.alternatives === true) {
-			params += "&alternatives=true";
-		}
+		params += "waypoint.0=" + encodeURIComponent(dest.origin || this.config.origin);
+		params += "&waypoint.1=" + encodeURIComponent(dest.destination);
+		params += "&optimize=" + mode === 'Driving' ? 'timeWithTraffic' : 'time';
+		params += "&key=" + (this.config.apiKey || this.config.apikey);
 
 		if (dest.arrival_time) {
-			params += "&arrival_time=" + dest.arrival_time;
+			params += "&timeType=Arrival&dateTime=" + dest.arrival_time;
 		} else {
-			params += "&departure_time=now";	//needed for time based on traffic conditions
+			params += "&timeType=Departure&dateTime=" + new Date().toLocaleTimeString();	//needed for time based on traffic conditions
 		}
+
+		// let params = "?";
+		// params += "origin=" + encodeURIComponent(dest.origin || this.config.origin);
+		// params += "&destination=" + encodeURIComponent(dest.destination);
+		// params += "&key=" + (this.config.apiKey || this.config.apikey);
+		// params += "&language=" + this.config.lang;
+
+		// //travel mode
+		// let mode = "driving";
+		// if (dest.mode && this.travelModes.indexOf(dest.mode) !== -1) {
+		// 	mode = dest.mode;
+		// }
+		// params += "&mode=" + mode;
+
+		// //transit mode if travelMode = "transit"
+		// if (mode === "transit" && dest.transitMode) {
+		// 	const tModes = dest.transitMode.split("|");
+		// 	let sanitizedTransitModes = "";
+		// 	for (let i = 0; i < tModes.length; i++) {
+		// 		if (this.transitModes.indexOf(tModes[i]) !== -1) {
+		// 			sanitizedTransitModes += (sanitizedTransitModes === "" ? tModes[i] : "|" + tModes[i]);
+		// 		}
+		// 	}
+		// 	if (sanitizedTransitModes.length > 0) {
+		// 		params += "&transit_mode=" + sanitizedTransitModes;
+		// 	}
+		// }
+
+		// if (dest.waypoints) {
+		// 	const waypoints = dest.waypoints.split("|");
+		// 	for (let i = 0; i < waypoints.length; i++) {
+		// 		waypoints[i] = "via:" + encodeURIComponent(waypoints[i]);
+		// 	}
+		// 	params += "&waypoints=" + waypoints.join("|");
+		// }
+
+		// //avoid
+		// if (dest.avoid) {
+		// 	const a = dest.avoid.split("|");
+		// 	let sanitizedAvoidOptions = "";
+		// 	for (let i = 0; i < a.length; i++) {
+		// 		if (this.avoidOptions.indexOf(a[i]) !== -1) {
+		// 			sanitizedAvoidOptions += (sanitizedAvoidOptions === "" ? a[i] : "|" + a[i]);
+		// 		}
+		// 	}
+		// 	if (sanitizedAvoidOptions.length > 0) {
+		// 		params += "&avoid=" + sanitizedAvoidOptions;
+		// 	}
+		// }
+		// if (dest.alternatives === true) {
+		// 	params += "&alternatives=true";
+		// }
+
+		// if (dest.arrival_time) {
+		// 	params += "&arrival_time=" + dest.arrival_time;
+		// } else {
+		// 	params += "&departure_time=now";	//needed for time based on traffic conditions
+		// }
 
 		return params;
 
@@ -596,7 +622,7 @@ Module.register("MMM-MyCommute", {
 	},
 
 	socketNotificationReceived: function(notification, payload) {
-		if (notification === "GOOGLE_TRAFFIC_RESPONSE" + this.identifier) {
+		if (notification === "BING_TRAFFIC_RESPONSE" + this.identifier) {
 			this.predictions = payload;
 			this.lastUpdated = moment();
 			if (this.loading) {
