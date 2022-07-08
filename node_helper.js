@@ -48,10 +48,13 @@ module.exports = NodeHelper.create({
 						for (let i = 0; i < data.resourceSets[0].resources.length; i++) {
 							const r = data.resourceSets[0].resources[i];
 							const routeObj = new Object({
-								summary: r.distanceUnit, // TODO: figure out what this should be
+								summary: r.travelMode,
 								time: r.travelDuration,
 							});
 
+							if (dest.config.mode && dest.config.mode === "Walking") {
+								routeObj.summary = r.routeLegs[0].description;
+							}
 							if (dest.config.mode && dest.config.mode === "Driving") {
 								routeObj.timeInTraffic = r.travelDurationTraffic;
 							}
@@ -68,7 +71,7 @@ module.exports = NodeHelper.create({
 											arrivalTime = new Date(parseInt(s.childItineraryItems[0].time.substr(6)));
 										}
 										transitInfo.push({
-											routeLabel: s.instruction.text ? s.instruction.text : s.instruction.maneuverType, 
+											routeLabel: s.childItineraryItems[0].instruction.text ? s.childItineraryItems[0].instruction.text : s.instruction.text, 
 											vehicle: s.iconType, 
 											arrivalTime: arrivalTime
 										});

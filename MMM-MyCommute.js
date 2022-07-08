@@ -11,12 +11,6 @@
 
 	MIT Licensed
 
-	// Using https://docs.traveltime.com/api/start/routes
-	app id 2a6adfe5
-	api key 469682f33e8b9ab1302352fead80533a
-	// https://positionstack.com/
-	api key 2c1b016dca74c2f45ccaa50d3e9f06db
-
 	
 		{
 			module: 'MMM-MyCommute',
@@ -26,8 +20,11 @@
 				origin: '28 Ivy Nola Way, Henderson, Auckland',
 				startTime: '00:00',
 				endTime: '23:59',
-				pollFrequency: 10 * 60 * 1000, // every 10 minutes 10 * 60 * 1000
 				// hideDays: [0, 6],
+				showSummary: true,
+				// colorCodeTravelTime: false,
+				travelTimeFormat: 'h[h] m[m]',
+				pollFrequency: 5 * 60 * 1000, // every 10 minutes 10 * 60 * 1000
 				destinations: [
 					{
 						destination: '33 Fort Street, Auckland CBD, Auckland',
@@ -36,8 +33,12 @@
 					},
 					{
 						destination: '33 Fort Street, Auckland CBD, Auckland',
-						label: 'BNZ Parking transit',
-						mode: 'Transit'
+						label: 'BNZ Parking (transit)',
+						mode: 'Transit',
+						showNextVehicleDeparture: true,
+						startTime: '00:00',
+						endTime: '11:59',
+						hideDays: [0, 6],
 					},
 					{
 						destination: 'Westfield Newmarket Broadway, Newmarket, Auckland',
@@ -181,6 +182,8 @@ Module.register("MMM-MyCommute", {
 		"Train":            "train",
 		"Walk":             "walk",
 		"Other":            "streetcar",
+		
+		"Walking":             "walk",
 	},
 
 	start: function() {
@@ -475,6 +478,18 @@ Module.register("MMM-MyCommute", {
 		return timeEl;
 	},
 
+	formatSummary: function(route) {
+		if (route.summary ==="Driving" && route.timeInTraffic && route.time) {
+			const variance = route.timeInTraffic / route.time;
+			if (variance > this.config.moderateTimeThreshold) {
+				return moment.duration(Number(route.timeInTraffic - route.time), "seconds").format(this.config.travelTimeFormat, {trim: this.config.travelTimeFormatTrim}) + " traffic delay";
+			} else {
+				return "No significant traffic";
+			}
+		}
+		return route.summary;
+	},
+
 	getTransitIcon: function(dest, route) {
 		let transitIcon;
 		if (dest.transitMode) {
@@ -581,7 +596,7 @@ Module.register("MMM-MyCommute", {
 						symbolIcon = this.getTransitIcon(p.config,r);
 						this.buildTransitSummary(r.transitInfo, singleSummary);
 					} else {
-						singleSummary.innerHTML = r.summary;
+						singleSummary.innerHTML = this.formatSummary(r);
 					}
 					singleSummary.appendChild(this.formatTime(r.time, r.timeInTraffic));
 					row.appendChild(singleSummary);
@@ -602,7 +617,7 @@ Module.register("MMM-MyCommute", {
 						symbolIcon = this.getTransitIcon(p.config,r);
 						this.buildTransitSummary(r.transitInfo, multiSummary);
 					} else {
-						multiSummary.innerHTML = r.summary;
+						multiSummary.innerHTML = this.formatSummary(r);
 					}
 					routeSummaryOuter.appendChild(multiSummary);
 					routeSummaryOuter.appendChild(this.formatTime(r.time, r.timeInTraffic));
