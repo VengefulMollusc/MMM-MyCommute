@@ -51,7 +51,6 @@ module.exports = NodeHelper.create({
 								summary: r.travelMode,
 								time: r.travelDuration,
 							});
-
 							if (dest.config.mode && dest.config.mode === "Walking") {
 								routeObj.summary = r.routeLegs[0].description;
 							}
@@ -68,7 +67,9 @@ module.exports = NodeHelper.create({
 										if (!gotFirstTransitLeg && dest.config.showNextVehicleDeparture) {
 											gotFirstTransitLeg = true;
 											// arrivalTime = moment(s.childItineraryItems[0].time * 1000);
-											arrivalTime = new Date(parseInt(s.childItineraryItems[0].time.substr(6)));
+											// arrivalTime = new Date(parseInt(s.childItineraryItems[0].time.substr(6)));
+											// arrivalTime = moment(moment.parseZone(s.childItineraryItems[0].time).format('YYYY-MM-DDTHH:mm:ss')).tz('New Zealand/Auckland');
+											arrivalTime = moment(s.childItineraryItems[0].time).format();
 										}
 										transitInfo.push({
 											routeLabel: s.childItineraryItems[0].instruction.text ? s.childItineraryItems[0].instruction.text : s.instruction.text, 
