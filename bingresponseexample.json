@@ -1,0 +1,3435 @@
+{
+    "authenticationResultCode": "ValidCredentials",
+    "brandLogoUri": "http://dev.virtualearth.net/Branding/logo_powered_by.png",
+    "copyright": "Copyright © 2022 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+    "resourceSets": [
+        {
+            "estimatedTotal": 1,
+            "resources": [
+                {
+                    "__type": "Route:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        -36.89832,
+                        174.623879,
+                        -36.845511,
+                        174.773598
+                    ],
+                    "id": "v70,h-804395129,i0,a0,cen-US,dAAAAAAAAAAA1,y0,s1,m1,o1,t15,wpSxDHOtyQsAdlDDT9tNlQA2~AM38GuHJFjLOAADgAbSgJj8A0~MjggSXZ5IE5vbGEgV2F5LCBIZW5kZXJzb24sIEF1Y2tsYW5kIDA2MTI1~~~~~~~~v12,wv0NRoE9sQsBW8UbmkdhlQA2~AM38GuFZUzfOAADgAWvCzD4A0~MzMgRm9ydCBTdHJlZXQsIEF1Y2tsYW5kIENlbnRyYWwsIEF1Y2tsYW5kIDEwMTA1~~~~~~~~v12,k1",
+                    "distanceUnit": "Kilometer",
+                    "durationUnit": "Second",
+                    "routeLegs": [
+                        {
+                            "actualEnd": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.846182,
+                                    174.76781
+                                ]
+                            },
+                            "actualStart": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.897801,
+                                    174.623879
+                                ]
+                            },
+                            "alternateVias": [],
+                            "description": "13, 16",
+                            "endLocation": {
+                                "bbox": [
+                                    -36.84722,
+                                    174.76664,
+                                    -36.84542,
+                                    174.76888
+                                ],
+                                "name": "33 Fort Street, Auckland Central, Auckland 1010",
+                                "point": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.84632,
+                                        174.76776
+                                    ]
+                                },
+                                "address": {
+                                    "addressLine": "33 Fort Street",
+                                    "adminDistrict": "North Island",
+                                    "adminDistrict2": "Auckland",
+                                    "countryRegion": "New Zealand",
+                                    "formattedAddress": "33 Fort Street, Auckland Central, Auckland 1010",
+                                    "locality": "Auckland",
+                                    "postalCode": "1010"
+                                },
+                                "confidence": "High",
+                                "entityType": "Address",
+                                "geocodePoints": [
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.84632,
+                                            174.76776
+                                        ],
+                                        "calculationMethod": "Rooftop",
+                                        "usageTypes": [
+                                            "Display"
+                                        ]
+                                    },
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.84618,
+                                            174.76781
+                                        ],
+                                        "calculationMethod": "None",
+                                        "usageTypes": [
+                                            "Route"
+                                        ]
+                                    }
+                                ],
+                                "matchCodes": [
+                                    "Good"
+                                ]
+                            },
+                            "endTime": "/Date(1657229239269-0700)/",
+                            "itineraryItems": [
+                                {
+                                    "compassDirection": "southeast",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 125,
+                                            "endPathIndices": [
+                                                1
+                                            ],
+                                            "maneuverType": "DepartStart",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Ivy Nola Way"
+                                            ],
+                                            "roadType": "Street",
+                                            "startPathIndices": [
+                                                0
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "DepartStart",
+                                        "text": "Head southeast on Ivy Nola Way toward Bruce McLaren Rd"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.897801,
+                                            174.623879
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "towardsRoadName": "Bruce McLaren Rd",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.088,
+                                    "travelDuration": 31,
+                                    "travelMode": "Driving",
+                                    "warnings": [
+                                        {
+                                            "severity": "None",
+                                            "text": "Unpaved Road",
+                                            "warningType": "UnPavedRoad"
+                                        },
+                                        {
+                                            "severity": "None",
+                                            "text": "Private Road",
+                                            "warningType": "PrivateRoad"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "compassDirection": "northeast",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 46,
+                                            "endPathIndices": [
+                                                6
+                                            ],
+                                            "locationCodes": [
+                                                "941+04453",
+                                                "941P04453",
+                                                "941+04454",
+                                                "941P04454"
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Bruce McLaren Rd"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                1
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnLeft",
+                                        "text": "Turn left onto Bruce McLaren Rd"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.89832,
+                                            174.624625
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 1.049,
+                                    "travelDuration": 111,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "north",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 12,
+                                            "endPathIndices": [
+                                                8
+                                            ],
+                                            "locationCodes": [
+                                                "941P04456",
+                                                "941+04457"
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Railside Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                6
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnLeft",
+                                        "text": "Turn left onto Railside Ave"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.890911,
+                                            174.631752
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.584,
+                                    "travelDuration": 47,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "north",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 274,
+                                            "endPathIndices": [
+                                                11
+                                            ],
+                                            "locationCodes": [
+                                                "941P04437",
+                                                "941P04457"
+                                            ],
+                                            "maneuverType": "EnterRoundabout",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Railside Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                8
+                                            ]
+                                        },
+                                        {
+                                            "compassDegrees": 359,
+                                            "endPathIndices": [
+                                                13
+                                            ],
+                                            "locationCodes": [
+                                                "941+04458",
+                                                "941P04458"
+                                            ],
+                                            "maneuverType": "ExitRoundabout",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Railside Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                11
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "1",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "EnterThenExitRoundabout",
+                                        "text": "At the roundabout, take the 1st exit"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.885655,
+                                            174.631475
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.433,
+                                    "travelDuration": 51,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "east",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 87,
+                                            "endPathIndices": [
+                                                15
+                                            ],
+                                            "maneuverType": "TurnRight",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Edsel St"
+                                            ],
+                                            "roadType": "Street",
+                                            "startPathIndices": [
+                                                13
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnRight",
+                                        "text": "Turn right onto Edsel St"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.88185,
+                                            174.631271
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.309,
+                                    "travelDuration": 85,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "north",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 47,
+                                            "endPathIndices": [
+                                                19
+                                            ],
+                                            "maneuverType": "EnterRoundabout",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Edsel St"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                15
+                                            ]
+                                        },
+                                        {
+                                            "compassDegrees": 14,
+                                            "endPathIndices": [
+                                                21
+                                            ],
+                                            "maneuverType": "ExitRoundabout",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Edsel St"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                19
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "1",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "EnterThenExitRoundabout",
+                                        "text": "At the roundabout, take the 1st exit"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.88173,
+                                            174.634719
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "signs": [
+                                        "Henderson",
+                                        "Edsel Street"
+                                    ],
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.204,
+                                    "travelDuration": 38,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "north",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 5,
+                                            "endPathIndices": [
+                                                24
+                                            ],
+                                            "locationCodes": [
+                                                "941P04259",
+                                                "941+04260"
+                                            ],
+                                            "maneuverType": "Continue",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Edmonton Rd"
+                                            ],
+                                            "roadShieldRequestParameters": {
+                                                "bucket": 459415,
+                                                "shields": [
+                                                    {
+                                                        "labels": [
+                                                            "19"
+                                                        ],
+                                                        "roadShieldType": 2
+                                                    }
+                                                ]
+                                            },
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                21
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "Continue",
+                                        "text": "Continue on 19 / Edmonton Rd"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.87998,
+                                            174.635234
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.199,
+                                    "travelDuration": 41,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "northeast",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 291,
+                                            "endPathIndices": [
+                                                27
+                                            ],
+                                            "locationCodes": [
+                                                "941N04269",
+                                                "941P04260",
+                                                "941P04269"
+                                            ],
+                                            "maneuverType": "EnterRoundabout",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Edmonton Rd"
+                                            ],
+                                            "roadShieldRequestParameters": {
+                                                "bucket": 459420,
+                                                "shields": [
+                                                    {
+                                                        "labels": [
+                                                            "13"
+                                                        ],
+                                                        "roadShieldType": 2
+                                                    }
+                                                ]
+                                            },
+                                            "roadType": "MajorRoad",
+                                            "startPathIndices": [
+                                                24
+                                            ]
+                                        },
+                                        {
+                                            "compassDegrees": 38,
+                                            "endPathIndices": [
+                                                50
+                                            ],
+                                            "locationCodes": [
+                                                "941+04261",
+                                                "941P04261",
+                                                "941+04262",
+                                                "941P04262",
+                                                "941+04263",
+                                                "941P04263",
+                                                "941+00396",
+                                                "941P00396"
+                                            ],
+                                            "maneuverType": "ExitRoundabout",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Edmonton Rd"
+                                            ],
+                                            "roadShieldRequestParameters": {
+                                                "bucket": 459420,
+                                                "shields": [
+                                                    {
+                                                        "labels": [
+                                                            "13"
+                                                        ],
+                                                        "roadShieldType": 2
+                                                    }
+                                                ]
+                                            },
+                                            "roadType": "MajorRoad",
+                                            "startPathIndices": [
+                                                27
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "2",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "EnterThenExitRoundabout",
+                                        "text": "At the roundabout, take the 2nd exit for 13 / Edmonton Rd toward Te Atatu / Edmonton Road"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.878211,
+                                            174.635127
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "signs": [
+                                        "Te Atatu",
+                                        "Edmonton Road"
+                                    ],
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 3.103,
+                                    "travelDuration": 327,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "northwest",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 331,
+                                            "endPathIndices": [
+                                                54
+                                            ],
+                                            "locationCodes": [
+                                                "941P13156"
+                                            ],
+                                            "maneuverType": "TakeRampLeft",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Entry 14 Te Atatu Rd"
+                                            ],
+                                            "roadType": "Ramp",
+                                            "startPathIndices": [
+                                                50
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TakeRampLeft",
+                                        "text": "Take the ramp on the left for 16 and head toward Auckland / Motorway"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.856554,
+                                            174.651838
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "signs": [
+                                        "Auckland",
+                                        "Motorway",
+                                        "16"
+                                    ],
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.035,
+                                    "travelDuration": 8,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "northwest",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 313,
+                                            "endPathIndices": [
+                                                57
+                                            ],
+                                            "locationCodes": [
+                                                "941P13156"
+                                            ],
+                                            "maneuverType": "KeepStraight",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Entry 14 Te Atatu Rd"
+                                            ],
+                                            "roadType": "Ramp",
+                                            "startPathIndices": [
+                                                54
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "KeepStraight",
+                                        "text": "Keep straight to get onto Entry 14 Te Atatu Rd"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.85628,
+                                            174.651645
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.053,
+                                    "travelDuration": 7,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "west",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 255,
+                                            "endPathIndices": [
+                                                62
+                                            ],
+                                            "locationCodes": [
+                                                "941P13156"
+                                            ],
+                                            "maneuverType": "KeepStraight",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Entry 14 Te Atatu Rd"
+                                            ],
+                                            "roadType": "Ramp",
+                                            "startPathIndices": [
+                                                57
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "KeepStraight",
+                                        "text": "Keep straight to get onto Entry 14 Te Atatu Rd"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.856178,
+                                            174.651116
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.279,
+                                    "travelDuration": 21,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "east",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 112,
+                                            "endPathIndices": [
+                                                98
+                                            ],
+                                            "locationCodes": [
+                                                "941N00049",
+                                                "941-00048",
+                                                "941N00048",
+                                                "941-00047",
+                                                "941N00047",
+                                                "941-00046",
+                                                "941N00046",
+                                                "941-00045",
+                                                "941N00045",
+                                                "941-00044",
+                                                "941N00044"
+                                            ],
+                                            "maneuverType": "Merge",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "16"
+                                            ],
+                                            "roadShieldRequestParameters": {
+                                                "bucket": 459393,
+                                                "shields": [
+                                                    {
+                                                        "labels": [
+                                                            "16"
+                                                        ],
+                                                        "roadShieldType": 1
+                                                    }
+                                                ]
+                                            },
+                                            "roadType": "LimitedAccessHighway",
+                                            "startPathIndices": [
+                                                62
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "Merge",
+                                        "text": "Merge onto 16"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.85772,
+                                            174.652846
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 9.89,
+                                    "travelDuration": 406,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "east",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 57,
+                                            "endPathIndices": [
+                                                106
+                                            ],
+                                            "locationCodes": [
+                                                "941-00043"
+                                            ],
+                                            "maneuverType": "TakeRampRight",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Northwestern Motorway"
+                                            ],
+                                            "roadType": "Ramp",
+                                            "startPathIndices": [
+                                                98
+                                            ]
+                                        },
+                                        {
+                                            "compassDegrees": 110,
+                                            "endPathIndices": [
+                                                117
+                                            ],
+                                            "locationCodes": [
+                                                "941-00043",
+                                                "941N00043",
+                                                "941-00042",
+                                                "941N00042",
+                                                "941-00041"
+                                            ],
+                                            "maneuverType": "Merge",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "16"
+                                            ],
+                                            "roadShieldRequestParameters": {
+                                                "bucket": 459393,
+                                                "shields": [
+                                                    {
+                                                        "labels": [
+                                                            "16"
+                                                        ],
+                                                        "roadShieldType": 1
+                                                    }
+                                                ]
+                                            },
+                                            "roadType": "LimitedAccessHighway",
+                                            "startPathIndices": [
+                                                106
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "RampThenHighwayRight",
+                                        "text": "Take the ramp on the right for 16 and head toward Port"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.862268,
+                                            174.753715
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "signs": [
+                                        "Port",
+                                        "16"
+                                    ],
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 2.238,
+                                    "travelDuration": 126,
+                                    "travelMode": "Driving",
+                                    "warnings": [
+                                        {
+                                            "origin": "-36.860235,174.761398",
+                                            "severity": "Minor",
+                                            "text": "Minor Congestion",
+                                            "to": "-36.860621,174.762479",
+                                            "warningType": "TrafficFlow"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "compassDirection": "northwest",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 312,
+                                            "endPathIndices": [
+                                                123
+                                            ],
+                                            "locationCodes": [
+                                                "941P10666",
+                                                "941+10667",
+                                                "941P10667"
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Alten Rd"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                117
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnLeft",
+                                        "text": "Turn left onto Alten Rd toward City Centre / Hospitals"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.85311,
+                                            174.773106
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "signs": [
+                                        "City Centre",
+                                        "Hospitals"
+                                    ],
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.369,
+                                    "travelDuration": 89,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "northeast",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 54,
+                                            "endPathIndices": [
+                                                130
+                                            ],
+                                            "locationCodes": [
+                                                "941+00312",
+                                                "941P00311",
+                                                "941P00312"
+                                            ],
+                                            "maneuverType": "TurnRight",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Anzac Ave"
+                                            ],
+                                            "roadType": "MajorRoad",
+                                            "startPathIndices": [
+                                                123
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnRight",
+                                        "text": "Turn right onto Anzac Ave"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.850223,
+                                            174.77242
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.591,
+                                    "travelDuration": 116,
+                                    "travelMode": "Driving"
+                                },
+                                {
+                                    "compassDirection": "southwest",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 283,
+                                            "endPathIndices": [
+                                                132
+                                            ],
+                                            "locationCodes": [
+                                                "941-04134"
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Beach Rd"
+                                            ],
+                                            "roadType": "Highway",
+                                            "startPathIndices": [
+                                                130
+                                            ]
+                                        },
+                                        {
+                                            "compassDegrees": 222,
+                                            "endPathIndices": [
+                                                137
+                                            ],
+                                            "locationCodes": [
+                                                "941N04134",
+                                                "941-10650",
+                                                "941N10651"
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Fort St"
+                                            ],
+                                            "roadType": "Highway",
+                                            "startPathIndices": [
+                                                132
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnLeftThenTurnLeft",
+                                        "text": "Turn left onto Beach Rd, then immediately turn left onto Fort St"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.84573,
+                                            174.771605
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.386,
+                                    "travelDuration": 128,
+                                    "travelMode": "Driving",
+                                    "warnings": [
+                                        {
+                                            "origin": "-36.845513,174.770595",
+                                            "severity": "Minor",
+                                            "text": "Minor Congestion",
+                                            "to": "-36.84573,174.771605",
+                                            "warningType": "TrafficFlow"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "compassDirection": "west",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 279,
+                                            "endPathIndices": [
+                                                137
+                                            ],
+                                            "locationCodes": [
+                                                "941-10650"
+                                            ],
+                                            "maneuverType": "ArriveFinish",
+                                            "mode": "Driving",
+                                            "names": [
+                                                "Fort St"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                137
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "hints": [
+                                        {
+                                            "hintType": "PreviousIntersection",
+                                            "text": "The last intersection before your destination is Gore St"
+                                        },
+                                        {
+                                            "hintType": "NextIntersection",
+                                            "text": "If you reach Commerce St, you've gone too far"
+                                        }
+                                    ],
+                                    "iconType": "Auto",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "ArriveFinish",
+                                        "text": "Arrive at 33 Fort Street, Auckland Central, Auckland 1010"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.846182,
+                                            174.76781
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0,
+                                    "travelDuration": 0,
+                                    "travelMode": "Driving"
+                                }
+                            ],
+                            "routeRegion": "WWMX",
+                            "routeSubLegs": [
+                                {
+                                    "endWaypoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.846182,
+                                            174.76781
+                                        ],
+                                        "description": "33 Fort Street, Auckland Central, Auckland 1010",
+                                        "isVia": false,
+                                        "locationIdentifier": "0|205|252|26|225|89|83|55|206|0|0|224|1|107|194|204|62|0|-36.846182,174.76781",
+                                        "routePathIndex": 137
+                                    },
+                                    "startWaypoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.897801,
+                                            174.623879
+                                        ],
+                                        "description": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                        "isVia": false,
+                                        "locationIdentifier": "0|205|252|26|225|201|22|50|206|0|0|224|1|180|160|38|63|0|-36.897801,174.623879",
+                                        "routePathIndex": 0
+                                    },
+                                    "travelDistance": 19.81,
+                                    "travelDuration": 1642
+                                }
+                            ],
+                            "startLocation": {
+                                "bbox": [
+                                    -36.89879,
+                                    174.62267,
+                                    -36.89699,
+                                    174.62491
+                                ],
+                                "name": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                "point": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.89789,
+                                        174.62379
+                                    ]
+                                },
+                                "address": {
+                                    "addressLine": "28 Ivy Nola Way",
+                                    "adminDistrict": "North Island",
+                                    "adminDistrict2": "Auckland",
+                                    "countryRegion": "New Zealand",
+                                    "formattedAddress": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                    "locality": "Auckland",
+                                    "postalCode": "0612"
+                                },
+                                "confidence": "High",
+                                "entityType": "Address",
+                                "geocodePoints": [
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.89789,
+                                            174.62379
+                                        ],
+                                        "calculationMethod": "Rooftop",
+                                        "usageTypes": [
+                                            "Display"
+                                        ]
+                                    },
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.8978,
+                                            174.62388
+                                        ],
+                                        "calculationMethod": "None",
+                                        "usageTypes": [
+                                            "Route"
+                                        ]
+                                    }
+                                ],
+                                "matchCodes": [
+                                    "Good"
+                                ]
+                            },
+                            "startTime": "/Date(1657227597269-0700)/",
+                            "travelDistance": 19.81,
+                            "travelDuration": 1642,
+                            "travelMode": "Driving"
+                        }
+                    ],
+                    "trafficCongestion": "None",
+                    "trafficDataUsed": "FlowAndClosure",
+                    "travelDistance": 19.81,
+                    "travelDuration": 1614,
+                    "travelDurationTraffic": 1642,
+                    "travelMode": "Driving"
+                }
+            ]
+        }
+    ],
+    "statusCode": 200,
+    "statusDescription": "OK",
+    "traceId": "2ff6043b89ed478b947e6e915467b76b|PUS0004C80|0.0.0.0|PUS00021F5, Leg0-PUS00021F2|Ref A: CA49D963B2A4403BAD4ED4150E1E61C5 Ref B: SEL20EDGE0313 Ref C: 2022-07-07T01:59:56Z|Ref A: 428558F243AA41A69D3C5E1D0DD32E44 Ref B: SEL20EDGE0406 Ref C: 2022-07-07T01:59:56Z"
+}
+
+{
+    "authenticationResultCode": "ValidCredentials",
+    "brandLogoUri": "http://dev.virtualearth.net/Branding/logo_powered_by.png",
+    "copyright": "Copyright © 2022 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+    "resourceSets": [
+        {
+            "estimatedTotal": 1,
+            "resources": [
+                {
+                    "__type": "Route:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        -36.91161,
+                        174.623879,
+                        -36.84429,
+                        174.78215
+                    ],
+                    "id": "v70,h-1783731793,i0,a0,cen-US,dAAAAAAAAAAA1,y1,s1,m4,o1,t0,wpSxDHOtyQsAdlDDT9tNlQA2~ATExAakxLhNTAADgAbSgJj8A0~MjggSXZ5IE5vbGEgV2F5LCBIZW5kZXJzb24sIEF1Y2tsYW5kIDA2MTI1~~~~~~~~v12,wv0NRoE9sQsBW8UbmkdhlQA2~ATExAanpnBhTAADgAWvCzD4A0~MzMgRm9ydCBTdHJlZXQsIEF1Y2tsYW5kIENlbnRyYWwsIEF1Y2tsYW5kIDEwMTA1~~~~~~~~v12,k1",
+                    "distanceUnit": "Kilometer",
+                    "durationUnit": "Second",
+                    "routeLegs": [
+                        {
+                            "actualEnd": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.846182,
+                                    174.76781
+                                ]
+                            },
+                            "actualStart": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.897801,
+                                    174.623879
+                                ]
+                            },
+                            "alternateVias": [],
+                            "endLocation": {
+                                "bbox": [
+                                    -36.84722,
+                                    174.76664,
+                                    -36.84542,
+                                    174.76888
+                                ],
+                                "name": "33 Fort Street, Auckland Central, Auckland 1010",
+                                "point": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.84632,
+                                        174.76776
+                                    ]
+                                },
+                                "address": {
+                                    "addressLine": "33 Fort Street",
+                                    "adminDistrict": "North Island",
+                                    "adminDistrict2": "Auckland",
+                                    "countryRegion": "New Zealand",
+                                    "formattedAddress": "33 Fort Street, Auckland Central, Auckland 1010",
+                                    "locality": "Auckland",
+                                    "postalCode": "1010"
+                                },
+                                "confidence": "High",
+                                "entityType": "Address",
+                                "geocodePoints": [
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.84632,
+                                            174.76776
+                                        ],
+                                        "calculationMethod": "Rooftop",
+                                        "usageTypes": [
+                                            "Display"
+                                        ]
+                                    },
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.84618,
+                                            174.76781
+                                        ],
+                                        "calculationMethod": "None",
+                                        "usageTypes": [
+                                            "Route"
+                                        ]
+                                    }
+                                ],
+                                "matchCodes": [
+                                    "Good"
+                                ]
+                            },
+                            "endTime": "/Date(1657242068000-0700)/",
+                            "itineraryItems": [
+                                {
+                                    "compassDirection": "",
+                                    "details": [
+                                        {
+                                            "endPathIndices": [
+                                                14
+                                            ],
+                                            "maneuverType": "Walk",
+                                            "mode": "Transit",
+                                            "roadType": "NotApplicable",
+                                            "startPathIndices": [
+                                                0
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "DepartStart",
+                                        "text": "Walk from 28 Ivy Nola Way, Henderson, Auckland 0612 to Sunnyvale Train Station"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.897801,
+                                            174.623879
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 1.18,
+                                    "travelDuration": 850,
+                                    "travelMode": "Transit"
+                                },
+                                {
+                                    "childItineraryItems": [
+                                        {
+                                            "compassDirection": "",
+                                            "details": [
+                                                {
+                                                    "maneuverType": "TransitDepart",
+                                                    "mode": "Transit",
+                                                    "names": [
+                                                        "Sunnyvale Train Station"
+                                                    ],
+                                                    "roadType": "None"
+                                                }
+                                            ],
+                                            "exit": "",
+                                            "iconType": "None",
+                                            "instruction": {
+                                                "formattedText": null,
+                                                "maneuverType": "TransitDepart",
+                                                "text": "Depart from Sunnyvale Train Station"
+                                            },
+                                            "isRealTimeTransit": false,
+                                            "maneuverPoint": {
+                                                "type": "Point",
+                                                "coordinates": [
+                                                    -36.89687,
+                                                    174.63201
+                                                ]
+                                            },
+                                            "realTimeTransitDelay": 0,
+                                            "sideOfStreet": "Unknown",
+                                            "time": "/Date(1657239120000-0700)/",
+                                            "tollZone": "",
+                                            "transitStopId": 2887571,
+                                            "transitTerminus": "",
+                                            "travelDistance": 0,
+                                            "travelDuration": 0,
+                                            "travelMode": "Transit",
+                                            "tripId": 10011382
+                                        },
+                                        {
+                                            "compassDirection": "",
+                                            "details": [
+                                                {
+                                                    "maneuverType": "TransitArrive",
+                                                    "mode": "Transit",
+                                                    "names": [
+                                                        "Britomart Train Station"
+                                                    ],
+                                                    "roadType": "None"
+                                                }
+                                            ],
+                                            "exit": "",
+                                            "iconType": "None",
+                                            "instruction": {
+                                                "formattedText": null,
+                                                "maneuverType": "TransitArrive",
+                                                "text": "Arrive at Britomart Train Station"
+                                            },
+                                            "isRealTimeTransit": false,
+                                            "maneuverPoint": {
+                                                "type": "Point",
+                                                "coordinates": [
+                                                    -36.84429,
+                                                    174.76848
+                                                ]
+                                            },
+                                            "realTimeTransitDelay": 0,
+                                            "sideOfStreet": "Unknown",
+                                            "time": "/Date(1657241880000-0700)/",
+                                            "tollZone": "",
+                                            "transitStopId": 2887583,
+                                            "transitTerminus": "",
+                                            "travelDistance": 0,
+                                            "travelDuration": 0,
+                                            "travelMode": "Transit",
+                                            "tripId": 10011382
+                                        }
+                                    ],
+                                    "compassDirection": "",
+                                    "details": [
+                                        {
+                                            "endPathIndices": [
+                                                123
+                                            ],
+                                            "maneuverType": "TakeTransit",
+                                            "mode": "Transit",
+                                            "roadType": "NotApplicable",
+                                            "startPathIndices": [
+                                                14
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "hints": [
+                                        {
+                                            "hintType": "PreviousTransitStop",
+                                            "text": "Your stop is next after Parnell Train Station"
+                                        }
+                                    ],
+                                    "iconType": "Train",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TakeTransit",
+                                        "text": "Inter-city Rail: West - Britomart"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.89687,
+                                            174.63201
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitLine": {
+                                        "abbreviatedName": "West",
+                                        "agencyId": 5861,
+                                        "agencyName": "AT Metro",
+                                        "bookingUri": "",
+                                        "lineColor": 16777215,
+                                        "phoneNumber": "(09)355-3553",
+                                        "providerInfo": "Service provider: AT Metro - (09)355-3553",
+                                        "scheduleUri": "",
+                                        "transportType": 4,
+                                        "uri": "http://www.aucklandtransport.govt.nz",
+                                        "verboseName": "Swanson Train Station to Britomart Train Station",
+                                        "version": "Jun 24 2022 10:24PM"
+                                    },
+                                    "transitTerminus": "Britomart",
+                                    "travelDistance": 20.33,
+                                    "travelDuration": 2760,
+                                    "travelMode": "Transit"
+                                },
+                                {
+                                    "compassDirection": "",
+                                    "details": [
+                                        {
+                                            "endPathIndices": [
+                                                127
+                                            ],
+                                            "maneuverType": "Walk",
+                                            "mode": "Transit",
+                                            "roadType": "NotApplicable",
+                                            "startPathIndices": [
+                                                123
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "ArriveFinish",
+                                        "text": "Walk from Britomart Train Station to 33 Fort Street, Auckland Central, Auckland 1010"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.84429,
+                                            174.76848
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.261,
+                                    "travelDuration": 188,
+                                    "travelMode": "Transit"
+                                }
+                            ],
+                            "routeRegion": "Transit-WDTT",
+                            "routeSubLegs": [
+                                {
+                                    "endWaypoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.846182,
+                                            174.76781
+                                        ],
+                                        "description": "33 Fort Street, Auckland Central, Auckland 1010",
+                                        "isVia": false,
+                                        "locationIdentifier": "1|49|49|1|169|233|156|24|83|0|0|224|1|107|194|204|62|0|-36.846182,174.76781",
+                                        "routePathIndex": 127
+                                    },
+                                    "startWaypoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.897801,
+                                            174.623879
+                                        ],
+                                        "description": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                        "isVia": false,
+                                        "locationIdentifier": "1|49|49|1|169|49|46|19|83|0|0|224|1|180|160|38|63|0|-36.897801,174.623879",
+                                        "routePathIndex": 0
+                                    },
+                                    "travelDistance": 21.771,
+                                    "travelDuration": 3798
+                                }
+                            ],
+                            "startLocation": {
+                                "bbox": [
+                                    -36.89879,
+                                    174.62267,
+                                    -36.89699,
+                                    174.62491
+                                ],
+                                "name": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                "point": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.89789,
+                                        174.62379
+                                    ]
+                                },
+                                "address": {
+                                    "addressLine": "28 Ivy Nola Way",
+                                    "adminDistrict": "North Island",
+                                    "adminDistrict2": "Auckland",
+                                    "countryRegion": "New Zealand",
+                                    "formattedAddress": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                    "locality": "Auckland",
+                                    "postalCode": "0612"
+                                },
+                                "confidence": "High",
+                                "entityType": "Address",
+                                "geocodePoints": [
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.89789,
+                                            174.62379
+                                        ],
+                                        "calculationMethod": "Rooftop",
+                                        "usageTypes": [
+                                            "Display"
+                                        ]
+                                    },
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.8978,
+                                            174.62388
+                                        ],
+                                        "calculationMethod": "None",
+                                        "usageTypes": [
+                                            "Route"
+                                        ]
+                                    }
+                                ],
+                                "matchCodes": [
+                                    "Good"
+                                ]
+                            },
+                            "startTime": "/Date(1657238270000-0700)/",
+                            "travelDistance": 21.771,
+                            "travelDuration": 3798,
+                            "travelMode": "Transit"
+                        }
+                    ],
+                    "trafficCongestion": "Unknown",
+                    "trafficDataUsed": "None",
+                    "travelDistance": 21.771,
+                    "travelDuration": 3798,
+                    "travelDurationTraffic": 0,
+                    "travelMode": "Transit"
+                }
+            ]
+        }
+    ],
+    "statusCode": 200,
+    "statusDescription": "OK",
+    "traceId": "30ef66047a434615b45c115e45190f39|PUS0004C64|0.0.0.0|PUS0005C76, Leg0-PUS0004C2D|Ref A: E0C61F8486A145D8B725FD38B54F2248 Ref B: SEL20EDGE0305 Ref C: 2022-07-07T04:51:27Z|Ref A: DB173DDF4ABB489A82E095E195FF8501 Ref B: SEL20EDGE0418 Ref C: 2022-07-07T04:51:27Z"
+}
+
+{
+    "authenticationResultCode": "ValidCredentials",
+    "brandLogoUri": "http://dev.virtualearth.net/Branding/logo_powered_by.png",
+    "copyright": "Copyright © 2022 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+    "resourceSets": [
+        {
+            "estimatedTotal": 1,
+            "resources": [
+                {
+                    "__type": "Route:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        -36.89832,
+                        174.623879,
+                        -36.883212,
+                        174.63423
+                    ],
+                    "id": "v70,h1173096232,i0,a0,cen-US,dAAAAAAAAAAA1,y0,s1,m2,o1,t0,wpSxDHOtyQsAdlDDT9tNlQA2~AM38GuHJFjLOAADgAbSgJj8A0~MjggSXZ5IE5vbGEgV2F5LCBIZW5kZXJzb24sIEF1Y2tsYW5kIDA2MTI1~~~~~~~~v12,wvhOzXgxxQsCe76fGS9RlQA2~AM38GuFTBzPOAADgAQAAAAAA0~NSBWaXRhc292aWNoIEF2ZW51ZSwgSGVuZGVyc29uLCBBdWNrbGFuZCAwNjEy0~~~~~~~~v12,k1",
+                    "distanceUnit": "Kilometer",
+                    "durationUnit": "Second",
+                    "routeLegs": [
+                        {
+                            "actualEnd": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.883212,
+                                    174.63423
+                                ]
+                            },
+                            "actualStart": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.897801,
+                                    174.623879
+                                ]
+                            },
+                            "alternateVias": [],
+                            "description": "Bruce McLaren Rd, Railside Ave",
+                            "endLocation": {
+                                "bbox": [
+                                    -36.88413,
+                                    174.63337,
+                                    -36.88233,
+                                    174.63561
+                                ],
+                                "name": "5 Vitasovich Avenue, Henderson, Auckland 0612",
+                                "point": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.88323,
+                                        174.63449
+                                    ]
+                                },
+                                "address": {
+                                    "addressLine": "5 Vitasovich Avenue",
+                                    "adminDistrict": "North Island",
+                                    "adminDistrict2": "Auckland",
+                                    "countryRegion": "New Zealand",
+                                    "formattedAddress": "5 Vitasovich Avenue, Henderson, Auckland 0612",
+                                    "locality": "Auckland",
+                                    "postalCode": "0612"
+                                },
+                                "confidence": "High",
+                                "entityType": "Address",
+                                "geocodePoints": [
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.88323,
+                                            174.63449
+                                        ],
+                                        "calculationMethod": "Rooftop",
+                                        "usageTypes": [
+                                            "Display"
+                                        ]
+                                    },
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.88319,
+                                            174.63425
+                                        ],
+                                        "calculationMethod": "None",
+                                        "usageTypes": [
+                                            "Route"
+                                        ]
+                                    }
+                                ],
+                                "matchCodes": [
+                                    "Good"
+                                ]
+                            },
+                            "endTime": "/Date(1657321065604-0700)/",
+                            "itineraryItems": [
+                                {
+                                    "compassDirection": "southeast",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 125,
+                                            "endPathIndices": [
+                                                1
+                                            ],
+                                            "maneuverType": "DepartStart",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Ivy Nola Way"
+                                            ],
+                                            "roadType": "Street",
+                                            "startPathIndices": [
+                                                0
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "DepartStart",
+                                        "text": "Head southeast on Ivy Nola Way toward Bruce McLaren Rd"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.897801,
+                                            174.623879
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "towardsRoadName": "Bruce McLaren Rd",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.088,
+                                    "travelDuration": 63,
+                                    "travelMode": "Walking",
+                                    "warnings": [
+                                        {
+                                            "severity": "None",
+                                            "text": "Unpaved Road",
+                                            "warningType": "UnPavedRoad"
+                                        },
+                                        {
+                                            "severity": "None",
+                                            "text": "Private Road",
+                                            "warningType": "PrivateRoad"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "compassDirection": "northeast",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 46,
+                                            "endPathIndices": [
+                                                6
+                                            ],
+                                            "locationCodes": [
+                                                "941P04454"
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Bruce McLaren Rd"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                1
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnLeft",
+                                        "text": "Turn left onto Bruce McLaren Rd"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.89832,
+                                            174.624625
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 1.049,
+                                    "travelDuration": 755,
+                                    "travelMode": "Walking"
+                                },
+                                {
+                                    "compassDirection": "north",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 12,
+                                            "endPathIndices": [
+                                                8
+                                            ],
+                                            "locationCodes": [
+                                                "941+04457"
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Railside Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                6
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnLeft",
+                                        "text": "Turn left onto Railside Ave"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.890911,
+                                            174.631752
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.584,
+                                    "travelDuration": 420,
+                                    "travelMode": "Walking"
+                                },
+                                {
+                                    "compassDirection": "north",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 274,
+                                            "endPathIndices": [
+                                                11
+                                            ],
+                                            "locationCodes": [
+                                                "941P04437",
+                                                "941P04457"
+                                            ],
+                                            "maneuverType": "EnterRoundabout",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Railside Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                8
+                                            ]
+                                        },
+                                        {
+                                            "compassDegrees": 359,
+                                            "endPathIndices": [
+                                                14
+                                            ],
+                                            "locationCodes": [
+                                                "941+04458"
+                                            ],
+                                            "maneuverType": "ExitRoundabout",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Railside Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                11
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "1",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "EnterThenExitRoundabout",
+                                        "text": "At the roundabout, take the 1st exit"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.885655,
+                                            174.631475
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.121,
+                                    "travelDuration": 86,
+                                    "travelMode": "Walking"
+                                },
+                                {
+                                    "compassDirection": "east",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 87,
+                                            "endPathIndices": [
+                                                16
+                                            ],
+                                            "maneuverType": "TurnRight",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Cranwell St"
+                                            ],
+                                            "roadType": "Street",
+                                            "startPathIndices": [
+                                                14
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "TurnRight",
+                                        "text": "Turn right onto Cranwell St"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.884655,
+                                            174.631444
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.132,
+                                    "travelDuration": 95,
+                                    "travelMode": "Walking"
+                                },
+                                {
+                                    "compassDirection": "north",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 107,
+                                            "endPathIndices": [
+                                                18
+                                            ],
+                                            "maneuverType": "BearRight",
+                                            "mode": "Walking",
+                                            "roadType": "WalkingPath",
+                                            "startPathIndices": [
+                                                16
+                                            ]
+                                        },
+                                        {
+                                            "compassDegrees": 357,
+                                            "endPathIndices": [
+                                                21
+                                            ],
+                                            "maneuverType": "TurnLeft",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Vitasovich Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                18
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "BearRightThenTurnLeft",
+                                        "text": "Bear right, then turn left onto Vitasovich Ave"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.884578,
+                                            174.632927
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0.241,
+                                    "travelDuration": 173,
+                                    "travelMode": "Walking"
+                                },
+                                {
+                                    "compassDirection": "northeast",
+                                    "details": [
+                                        {
+                                            "compassDegrees": 26,
+                                            "endPathIndices": [
+                                                21
+                                            ],
+                                            "maneuverType": "ArriveFinish",
+                                            "mode": "Walking",
+                                            "names": [
+                                                "Vitasovich Ave"
+                                            ],
+                                            "roadType": "Arterial",
+                                            "startPathIndices": [
+                                                21
+                                            ]
+                                        }
+                                    ],
+                                    "exit": "",
+                                    "hints": [
+                                        {
+                                            "hintType": "PreviousIntersection",
+                                            "text": "The last intersection before your destination is Catherine St"
+                                        }
+                                    ],
+                                    "iconType": "Walk",
+                                    "instruction": {
+                                        "formattedText": null,
+                                        "maneuverType": "ArriveFinish",
+                                        "text": "Arrive at 5 Vitasovich Avenue, Henderson, Auckland 0612"
+                                    },
+                                    "isRealTimeTransit": false,
+                                    "maneuverPoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.883212,
+                                            174.63423
+                                        ]
+                                    },
+                                    "realTimeTransitDelay": 0,
+                                    "sideOfStreet": "Unknown",
+                                    "tollZone": "",
+                                    "transitTerminus": "",
+                                    "travelDistance": 0,
+                                    "travelDuration": 0,
+                                    "travelMode": "Walking"
+                                }
+                            ],
+                            "routeRegion": "WWMX",
+                            "routeSubLegs": [
+                                {
+                                    "endWaypoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.883212,
+                                            174.63423
+                                        ],
+                                        "description": "5 Vitasovich Avenue, Henderson, Auckland 0612",
+                                        "isVia": false,
+                                        "locationIdentifier": "0|205|252|26|225|83|7|51|206|0|0|224|1|0|0|0|0|0|-36.883212,174.63423",
+                                        "routePathIndex": 21
+                                    },
+                                    "startWaypoint": {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.897801,
+                                            174.623879
+                                        ],
+                                        "description": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                        "isVia": false,
+                                        "locationIdentifier": "0|205|252|26|225|201|22|50|206|0|0|224|1|180|160|38|63|0|-36.897801,174.623879",
+                                        "routePathIndex": 0
+                                    },
+                                    "travelDistance": 2.215,
+                                    "travelDuration": 1594
+                                }
+                            ],
+                            "startLocation": {
+                                "bbox": [
+                                    -36.89879,
+                                    174.62267,
+                                    -36.89699,
+                                    174.62491
+                                ],
+                                "name": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                "point": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.89789,
+                                        174.62379
+                                    ]
+                                },
+                                "address": {
+                                    "addressLine": "28 Ivy Nola Way",
+                                    "adminDistrict": "North Island",
+                                    "adminDistrict2": "Auckland",
+                                    "countryRegion": "New Zealand",
+                                    "formattedAddress": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                    "locality": "Auckland",
+                                    "postalCode": "0612"
+                                },
+                                "confidence": "High",
+                                "entityType": "Address",
+                                "geocodePoints": [
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.89789,
+                                            174.62379
+                                        ],
+                                        "calculationMethod": "Rooftop",
+                                        "usageTypes": [
+                                            "Display"
+                                        ]
+                                    },
+                                    {
+                                        "type": "Point",
+                                        "coordinates": [
+                                            -36.8978,
+                                            174.62388
+                                        ],
+                                        "calculationMethod": "None",
+                                        "usageTypes": [
+                                            "Route"
+                                        ]
+                                    }
+                                ],
+                                "matchCodes": [
+                                    "Good"
+                                ]
+                            },
+                            "startTime": "/Date(1657319471604-0700)/",
+                            "travelDistance": 2.215,
+                            "travelDuration": 1594,
+                            "travelMode": "Walking"
+                        }
+                    ],
+                    "trafficCongestion": "None",
+                    "trafficDataUsed": "None",
+                    "travelDistance": 2.215,
+                    "travelDuration": 1594,
+                    "travelDurationTraffic": 1594,
+                    "travelMode": "Walking"
+                }
+            ]
+        }
+    ],
+    "statusCode": 200,
+    "statusDescription": "OK",
+    "traceId": "3fb07f33920f48bea71e268744ead05a|PUS00024E4|0.0.0.0|PUS0005C77, Leg0-PUS00021F2|Ref A: 2D83F811A5684080A6F764248EC9D6E2 Ref B: SEL20EDGE0613 Ref C: 2022-07-08T03:31:11Z|Ref A: A4DE50AD5C904B848843F4B2D8229D07 Ref B: SEL20EDGE0318 Ref C: 2022-07-08T03:31:11Z"
+}
+
+{
+    "config": {
+        "mode": "Driving",
+        "label": "Test event at Newmarket",
+        "destination": "Westfield Newmarket, 277 Broadway, Newmarket, Auckland 1023, New Zealand",
+        "arrival_time": "7/9/2022 17:30:00",
+        "color": "#fff"
+    },
+    "routes": [
+        {
+            "summary": "Driving",
+            "time": 1450,
+            "timeInTraffic": 1474,
+            "wholePayload": {
+                "__type": "Route:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                "bbox": [
+                    -36.89832,
+                    174.623879,
+                    -36.856143,
+                    174.777255
+                ],
+                "id": "v70,h1577061071,i0,a0,cen-US,dABxzptBh2gg1,y2,s1,m1,o1,t4,wpSxDHOtyQsAdlDDT9tNlQA2~AM38GuHJFjLOAADgAbSgJj8A0~MjggSXZ5IE5vbGEgV2F5LCBIZW5kZXJzb24sIEF1Y2tsYW5kIDA2MTI1~~~~~~~~v12,wz4O7s3ZvQsCmD11Q39hlQA2~AM38GuFRIDnOAADgAc_Ohj4A0~Mjc3IEJyb2Fkd2F5LCBOZXdtYXJrZXQsIEF1Y2tsYW5kIDEwMjM1~~~~~~~~v12,k1",
+                "distanceUnit": "Kilometer",
+                "durationUnit": "Second",
+                "routeLegs": [
+                    {
+                        "actualEnd": {
+                            "type": "Point",
+                            "coordinates": [
+                                -36.870809,
+                                174.777255
+                            ]
+                        },
+                        "actualStart": {
+                            "type": "Point",
+                            "coordinates": [
+                                -36.897801,
+                                174.623879
+                            ]
+                        },
+                        "alternateVias": [],
+                        "description": "13, 16",
+                        "endLocation": {
+                            "bbox": [
+                                -36.87163,
+                                174.77576,
+                                -36.86983,
+                                174.778
+                            ],
+                            "name": "277 Broadway, Newmarket, Auckland 1023",
+                            "point": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.87073,
+                                    174.77688
+                                ]
+                            },
+                            "address": {
+                                "addressLine": "277 Broadway",
+                                "adminDistrict": "North Island",
+                                "adminDistrict2": "Auckland",
+                                "countryRegion": "New Zealand",
+                                "formattedAddress": "277 Broadway, Newmarket, Auckland 1023",
+                                "locality": "Auckland",
+                                "postalCode": "1023"
+                            },
+                            "confidence": "High",
+                            "entityType": "Address",
+                            "geocodePoints": [
+                                {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.87073,
+                                        174.77688
+                                    ],
+                                    "calculationMethod": "Rooftop",
+                                    "usageTypes": [
+                                        "Display"
+                                    ]
+                                },
+                                {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.87081,
+                                        174.77726
+                                    ],
+                                    "calculationMethod": "None",
+                                    "usageTypes": [
+                                        "Route"
+                                    ]
+                                }
+                            ],
+                            "matchCodes": [
+                                "Good"
+                            ]
+                        },
+                        "endTime": "/Date(1657413000000-0700)/",
+                        "itineraryItems": [
+                            {
+                                "compassDirection": "southeast",
+                                "details": [
+                                    {
+                                        "compassDegrees": 125,
+                                        "endPathIndices": [
+                                            1
+                                        ],
+                                        "maneuverType": "DepartStart",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Ivy Nola Way"
+                                        ],
+                                        "roadType": "Street",
+                                        "startPathIndices": [
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "DepartStart",
+                                    "text": "Head southeast on Ivy Nola Way toward Bruce McLaren Rd"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.897801,
+                                        174.623879
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "towardsRoadName": "Bruce McLaren Rd",
+                                "transitTerminus": "",
+                                "travelDistance": 0.088,
+                                "travelDuration": 31,
+                                "travelMode": "Driving",
+                                "warnings": [
+                                    {
+                                        "severity": "None",
+                                        "text": "Unpaved Road",
+                                        "warningType": "UnPavedRoad"
+                                    },
+                                    {
+                                        "severity": "None",
+                                        "text": "Private Road",
+                                        "warningType": "PrivateRoad"
+                                    }
+                                ]
+                            },
+                            {
+                                "compassDirection": "northeast",
+                                "details": [
+                                    {
+                                        "compassDegrees": 46,
+                                        "endPathIndices": [
+                                            6
+                                        ],
+                                        "locationCodes": [
+                                            "941+04453",
+                                            "941P04453",
+                                            "941+04454",
+                                            "941P04454"
+                                        ],
+                                        "maneuverType": "TurnLeft",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Bruce McLaren Rd"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TurnLeft",
+                                    "text": "Turn left onto Bruce McLaren Rd"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.89832,
+                                        174.624625
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 1.049,
+                                "travelDuration": 129,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "north",
+                                "details": [
+                                    {
+                                        "compassDegrees": 12,
+                                        "endPathIndices": [
+                                            8
+                                        ],
+                                        "locationCodes": [
+                                            "941P04456",
+                                            "941+04457"
+                                        ],
+                                        "maneuverType": "TurnLeft",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Railside Ave"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            6
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TurnLeft",
+                                    "text": "Turn left onto Railside Ave"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.890911,
+                                        174.631752
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.584,
+                                "travelDuration": 67,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "east",
+                                "details": [
+                                    {
+                                        "compassDegrees": 274,
+                                        "endPathIndices": [
+                                            13
+                                        ],
+                                        "locationCodes": [
+                                            "941P04437",
+                                            "941P04457",
+                                            "941N04457"
+                                        ],
+                                        "maneuverType": "EnterRoundabout",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Railside Ave"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            8
+                                        ]
+                                    },
+                                    {
+                                        "compassDegrees": 109,
+                                        "endPathIndices": [
+                                            15
+                                        ],
+                                        "locationCodes": [
+                                            "941+04438"
+                                        ],
+                                        "maneuverType": "ExitRoundabout",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "View Rd"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            13
+                                        ]
+                                    }
+                                ],
+                                "exit": "2",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "EnterThenExitRoundabout",
+                                    "text": "At the roundabout, take the 2nd exit for View Rd"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.885655,
+                                        174.631475
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.294,
+                                "travelDuration": 46,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "north",
+                                "details": [
+                                    {
+                                        "compassDegrees": 13,
+                                        "endPathIndices": [
+                                            23
+                                        ],
+                                        "maneuverType": "TurnLeft",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Vitasovich Ave"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            15
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TurnLeft",
+                                    "text": "Turn left onto Vitasovich Ave"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.886831,
+                                        174.633898
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.579,
+                                "travelDuration": 62,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "north",
+                                "details": [
+                                    {
+                                        "compassDegrees": 310,
+                                        "endPathIndices": [
+                                            25
+                                        ],
+                                        "maneuverType": "EnterRoundabout",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Edsel St"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            23
+                                        ]
+                                    },
+                                    {
+                                        "compassDegrees": 14,
+                                        "endPathIndices": [
+                                            27
+                                        ],
+                                        "maneuverType": "ExitRoundabout",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Edsel St"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            25
+                                        ]
+                                    }
+                                ],
+                                "exit": "2",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "EnterThenExitRoundabout",
+                                    "text": "At the roundabout, take the 2nd exit for Edsel St toward Henderson / Edsel Street"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.881832,
+                                        174.634735
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "signs": [
+                                    "Henderson",
+                                    "Edsel Street"
+                                ],
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.216,
+                                "travelDuration": 34,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "north",
+                                "details": [
+                                    {
+                                        "compassDegrees": 5,
+                                        "endPathIndices": [
+                                            30
+                                        ],
+                                        "locationCodes": [
+                                            "941P04259",
+                                            "941+04260"
+                                        ],
+                                        "maneuverType": "Continue",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Edmonton Rd"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459415,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "19"
+                                                    ],
+                                                    "roadShieldType": 2
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            27
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "Continue",
+                                    "text": "Continue on 19 / Edmonton Rd"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.87998,
+                                        174.635234
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.199,
+                                "travelDuration": 37,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "northeast",
+                                "details": [
+                                    {
+                                        "compassDegrees": 291,
+                                        "endPathIndices": [
+                                            33
+                                        ],
+                                        "locationCodes": [
+                                            "941N04269",
+                                            "941P04260",
+                                            "941P04269"
+                                        ],
+                                        "maneuverType": "EnterRoundabout",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Edmonton Rd"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459420,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "13"
+                                                    ],
+                                                    "roadShieldType": 2
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "MajorRoad",
+                                        "startPathIndices": [
+                                            30
+                                        ]
+                                    },
+                                    {
+                                        "compassDegrees": 38,
+                                        "endPathIndices": [
+                                            56
+                                        ],
+                                        "locationCodes": [
+                                            "941+04261",
+                                            "941P04261",
+                                            "941+04262",
+                                            "941P04262",
+                                            "941+04263",
+                                            "941P04263",
+                                            "941+00396",
+                                            "941P00396"
+                                        ],
+                                        "maneuverType": "ExitRoundabout",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Edmonton Rd"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459420,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "13"
+                                                    ],
+                                                    "roadShieldType": 2
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "MajorRoad",
+                                        "startPathIndices": [
+                                            33
+                                        ]
+                                    }
+                                ],
+                                "exit": "2",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "EnterThenExitRoundabout",
+                                    "text": "At the roundabout, take the 2nd exit for 13 / Edmonton Rd toward Te Atatu / Edmonton Road"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.878211,
+                                        174.635127
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "signs": [
+                                    "Te Atatu",
+                                    "Edmonton Road"
+                                ],
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 3.103,
+                                "travelDuration": 338,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "northwest",
+                                "details": [
+                                    {
+                                        "compassDegrees": 331,
+                                        "endPathIndices": [
+                                            60
+                                        ],
+                                        "locationCodes": [
+                                            "941P13156"
+                                        ],
+                                        "maneuverType": "TakeRampLeft",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Entry 14 Te Atatu Rd"
+                                        ],
+                                        "roadType": "Ramp",
+                                        "startPathIndices": [
+                                            56
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TakeRampLeft",
+                                    "text": "Take the ramp on the left for 16 and head toward Auckland / Motorway"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.856554,
+                                        174.651838
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "signs": [
+                                    "Auckland",
+                                    "Motorway",
+                                    "16"
+                                ],
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.035,
+                                "travelDuration": 7,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "northwest",
+                                "details": [
+                                    {
+                                        "compassDegrees": 313,
+                                        "endPathIndices": [
+                                            63
+                                        ],
+                                        "locationCodes": [
+                                            "941P13156"
+                                        ],
+                                        "maneuverType": "KeepStraight",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Entry 14 Te Atatu Rd"
+                                        ],
+                                        "roadType": "Ramp",
+                                        "startPathIndices": [
+                                            60
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "KeepStraight",
+                                    "text": "Keep straight to get onto Entry 14 Te Atatu Rd"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.85628,
+                                        174.651645
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.053,
+                                "travelDuration": 6,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "west",
+                                "details": [
+                                    {
+                                        "compassDegrees": 255,
+                                        "endPathIndices": [
+                                            68
+                                        ],
+                                        "locationCodes": [
+                                            "941P13156"
+                                        ],
+                                        "maneuverType": "KeepStraight",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Entry 14 Te Atatu Rd"
+                                        ],
+                                        "roadType": "Ramp",
+                                        "startPathIndices": [
+                                            63
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "KeepStraight",
+                                    "text": "Keep straight to get onto Entry 14 Te Atatu Rd"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.856178,
+                                        174.651116
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.279,
+                                "travelDuration": 19,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "east",
+                                "details": [
+                                    {
+                                        "compassDegrees": 112,
+                                        "endPathIndices": [
+                                            104
+                                        ],
+                                        "locationCodes": [
+                                            "941N00049",
+                                            "941-00048",
+                                            "941N00048",
+                                            "941-00047",
+                                            "941N00047",
+                                            "941-00046",
+                                            "941N00046",
+                                            "941-00045",
+                                            "941N00045",
+                                            "941-00044",
+                                            "941N00044"
+                                        ],
+                                        "maneuverType": "Merge",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "16"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459393,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "16"
+                                                    ],
+                                                    "roadShieldType": 1
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "LimitedAccessHighway",
+                                        "startPathIndices": [
+                                            68
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "Merge",
+                                    "text": "Merge onto 16"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.85772,
+                                        174.652846
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 9.89,
+                                "travelDuration": 389,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "northeast",
+                                "details": [
+                                    {
+                                        "compassDegrees": 46,
+                                        "endPathIndices": [
+                                            122
+                                        ],
+                                        "locationCodes": [
+                                            "941P13342",
+                                            "941-00022",
+                                            "941N00022",
+                                            "941-00021",
+                                            "941N00021",
+                                            "941-00020"
+                                        ],
+                                        "maneuverType": "KeepStraight",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "1"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459393,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "1"
+                                                    ],
+                                                    "roadShieldType": 1
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "LimitedAccessHighway",
+                                        "startPathIndices": [
+                                            104
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "KeepStraight",
+                                    "text": "Keep straight to get onto 1"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.862268,
+                                        174.753715
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "signs": [
+                                    "Hamilton",
+                                    "1"
+                                ],
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 2.291,
+                                "travelDuration": 101,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "east",
+                                "details": [
+                                    {
+                                        "compassDegrees": 102,
+                                        "endPathIndices": [
+                                            125
+                                        ],
+                                        "locationCodes": [
+                                            "941P13208"
+                                        ],
+                                        "maneuverType": "TakeRampLeft",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Exit 431 Gillies Ave"
+                                        ],
+                                        "roadType": "Ramp",
+                                        "startPathIndices": [
+                                            122
+                                        ]
+                                    }
+                                ],
+                                "exit": "431",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TakeRampLeft",
+                                    "text": "At Exit 431, head left on the ramp for 12 toward Newmarket"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.870065,
+                                        174.771798
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "signs": [
+                                    "Newmarket",
+                                    "12"
+                                ],
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.271,
+                                "travelDuration": 15,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "north",
+                                "details": [
+                                    {
+                                        "compassDegrees": 11,
+                                        "endPathIndices": [
+                                            129
+                                        ],
+                                        "locationCodes": [
+                                            "941P13210",
+                                            "941+00484"
+                                        ],
+                                        "maneuverType": "TurnLeft",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Gillies Ave"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459411,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "12"
+                                                    ],
+                                                    "roadShieldType": 2
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "Ramp",
+                                        "startPathIndices": [
+                                            125
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TurnLeft",
+                                    "text": "Turn left onto 12 / Gillies Ave toward Newmarket / 12"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.871832,
+                                        174.773869
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "signs": [
+                                    "Newmarket",
+                                    "12"
+                                ],
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.125,
+                                "travelDuration": 32,
+                                "travelMode": "Driving",
+                                "warnings": [
+                                    {
+                                        "origin": "-36.871386,174.77445",
+                                        "severity": "Moderate",
+                                        "text": "Moderate Congestion",
+                                        "to": "-36.871466,174.774427",
+                                        "warningType": "TrafficFlow"
+                                    }
+                                ]
+                            },
+                            {
+                                "compassDirection": "east",
+                                "details": [
+                                    {
+                                        "compassDegrees": 102,
+                                        "endPathIndices": [
+                                            131
+                                        ],
+                                        "maneuverType": "TurnRight",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Mortimer Pass"
+                                        ],
+                                        "roadType": "Arterial",
+                                        "startPathIndices": [
+                                            129
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TurnRight",
+                                    "text": "Turn right onto Mortimer Pass"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.871091,
+                                        174.774531
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.229,
+                                "travelDuration": 101,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "north",
+                                "details": [
+                                    {
+                                        "compassDegrees": 14,
+                                        "endPathIndices": [
+                                            135
+                                        ],
+                                        "locationCodes": [
+                                            "941+00281"
+                                        ],
+                                        "maneuverType": "TurnLeft",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Broadway"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459415,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "12"
+                                                    ],
+                                                    "roadShieldType": 2
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "MajorRoad",
+                                        "startPathIndices": [
+                                            131
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "TurnLeft",
+                                    "text": "Turn left onto 12 / Broadway"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.871619,
+                                        174.777014
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0.092,
+                                "travelDuration": 25,
+                                "travelMode": "Driving"
+                            },
+                            {
+                                "compassDirection": "north",
+                                "details": [
+                                    {
+                                        "compassDegrees": 17,
+                                        "endPathIndices": [
+                                            135
+                                        ],
+                                        "locationCodes": [
+                                            "941+00281"
+                                        ],
+                                        "maneuverType": "ArriveFinish",
+                                        "mode": "Driving",
+                                        "names": [
+                                            "Broadway"
+                                        ],
+                                        "roadShieldRequestParameters": {
+                                            "bucket": 459415,
+                                            "shields": [
+                                                {
+                                                    "labels": [
+                                                        "12"
+                                                    ],
+                                                    "roadShieldType": 2
+                                                }
+                                            ]
+                                        },
+                                        "roadType": "MajorRoad",
+                                        "startPathIndices": [
+                                            135
+                                        ]
+                                    }
+                                ],
+                                "exit": "",
+                                "hints": [
+                                    {
+                                        "hintType": "PreviousIntersection",
+                                        "text": "The last intersection before your destination is Mortimer Pass"
+                                    },
+                                    {
+                                        "hintType": "NextIntersection",
+                                        "text": "If you reach Morrow St, you've gone too far"
+                                    }
+                                ],
+                                "iconType": "Auto",
+                                "instruction": {
+                                    "formattedText": null,
+                                    "maneuverType": "ArriveFinish",
+                                    "text": "Arrive at 277 Broadway, Newmarket, Auckland 1023"
+                                },
+                                "isRealTimeTransit": false,
+                                "maneuverPoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.870809,
+                                        174.777255
+                                    ]
+                                },
+                                "realTimeTransitDelay": 0,
+                                "sideOfStreet": "Unknown",
+                                "tollZone": "",
+                                "transitTerminus": "",
+                                "travelDistance": 0,
+                                "travelDuration": 0,
+                                "travelMode": "Driving"
+                            }
+                        ],
+                        "routeRegion": "WWMX",
+                        "routeSubLegs": [
+                            {
+                                "endWaypoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.870809,
+                                        174.777255
+                                    ],
+                                    "description": "277 Broadway, Newmarket, Auckland 1023",
+                                    "isVia": false,
+                                    "locationIdentifier": "0|205|252|26|225|81|32|57|206|0|0|224|1|207|206|134|62|0|-36.870809,174.777255",
+                                    "routePathIndex": 135
+                                },
+                                "startWaypoint": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.897801,
+                                        174.623879
+                                    ],
+                                    "description": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                    "isVia": false,
+                                    "locationIdentifier": "0|205|252|26|225|201|22|50|206|0|0|224|1|180|160|38|63|0|-36.897801,174.623879",
+                                    "routePathIndex": 0
+                                },
+                                "travelDistance": 19.377,
+                                "travelDuration": 1450
+                            }
+                        ],
+                        "startLocation": {
+                            "bbox": [
+                                -36.89879,
+                                174.62267,
+                                -36.89699,
+                                174.62491
+                            ],
+                            "name": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                            "point": {
+                                "type": "Point",
+                                "coordinates": [
+                                    -36.89789,
+                                    174.62379
+                                ]
+                            },
+                            "address": {
+                                "addressLine": "28 Ivy Nola Way",
+                                "adminDistrict": "North Island",
+                                "adminDistrict2": "Auckland",
+                                "countryRegion": "New Zealand",
+                                "formattedAddress": "28 Ivy Nola Way, Henderson, Auckland 0612",
+                                "locality": "Auckland",
+                                "postalCode": "0612"
+                            },
+                            "confidence": "High",
+                            "entityType": "Address",
+                            "geocodePoints": [
+                                {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.89789,
+                                        174.62379
+                                    ],
+                                    "calculationMethod": "Rooftop",
+                                    "usageTypes": [
+                                        "Display"
+                                    ]
+                                },
+                                {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        -36.8978,
+                                        174.62388
+                                    ],
+                                    "calculationMethod": "None",
+                                    "usageTypes": [
+                                        "Route"
+                                    ]
+                                }
+                            ],
+                            "matchCodes": [
+                                "Good"
+                            ]
+                        },
+                        "startTime": "/Date(1657411526000-0700)/",
+                        "travelDistance": 19.377,
+                        "travelDuration": 1450,
+                        "travelMode": "Driving"
+                    }
+                ],
+                "trafficCongestion": "None",
+                "trafficDataUsed": "None",
+                "travelDistance": 19.377,
+                "travelDuration": 1450,
+                "travelDurationTraffic": 1474,
+                "travelMode": "Driving"
+            }
+        }
+    ]
+}
+
+[
+    {
+        "config": {
+            "destination": "33 Fort Street, Auckland CBD, Auckland",
+            "label": "BNZ Parking",
+            "mode": "Driving"
+        },
+        "routes": [
+            {
+                "summary": "Driving",
+                "time": 1549,
+                "timeInTraffic": 1577
+            }
+        ]
+    },
+    {
+        "config": {
+            "destination": "33 Fort Street, Auckland CBD, Auckland",
+            "label": "BNZ Parking (transit)",
+            "mode": "Transit",
+            "showNextVehicleDeparture": true,
+            "startTime": "00:00",
+            "endTime": "23:59"
+        },
+        "routes": [
+            {
+                "summary": "Transit",
+                "time": 3798,
+                "transitInfo": [
+                    {
+                        "routeLabel": "Depart from Sunnyvale Train Station",
+                        "vehicle": "Train",
+                        "arrivalTime": "2022-07-09T06:32:00+12:00"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "config": {
+            "mode": "Driving",
+            "label": "Test event at Newmarket",
+            "destination": "Westfield Newmarket, 277 Broadway, Newmarket, Auckland 1023, New Zealand",
+            "arrival_time": "07/09/2022 17:30:00",
+            "color": "#fff"
+        },
+        "routes": [
+            {
+                "summary": "Driving",
+                "time": 1450,
+                "startTime": "/Date(1657411525000-0700)/",
+                "timeInTraffic": 1475
+            }
+        ]
+    }
+]
