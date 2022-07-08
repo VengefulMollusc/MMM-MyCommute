@@ -17,36 +17,41 @@
 	// https://positionstack.com/
 	api key 2c1b016dca74c2f45ccaa50d3e9f06db
 
-	// this seems to come straight from google api payload
-	this.predictions = [
+	
 		{
-			routes: [
-				{
-					transitInfo: [
-						{
-							vehicle: string?,
-							routeLabel: string?,
-							arrivalTime: timeString?,
-						},
-						{}
-					],
-					summary: string?,
-					time: float?,
-					timeInTraffic: float?,
-				},
-				{}
-			],
+			module: 'MMM-MyCommute',
+			position: 'top_left',
 			config: {
-				mode: 'driving',
-				showError: false,
-				label: 'Air Canada Centre',
-				transitMode: 'transitIcon|something'
-			},
-			error: WHAT?,
-			error_msg: string?,
+				apiKey: 'AvE-U-CdL3R4HoB5HnL8g9cti6E5-QaDEpMNBQKzkeqKMN4s2LLG8JKoZoqvyzDt',
+				origin: '28 Ivy Nola Way, Henderson, Auckland',
+				startTime: '00:00',
+				endTime: '23:59',
+				pollFrequency: 10 * 60 * 1000, // every 10 minutes 10 * 60 * 1000
+				// hideDays: [0, 6],
+				destinations: [
+					{
+						destination: '33 Fort Street, Auckland CBD, Auckland',
+						label: 'BNZ Parking',
+						mode: 'Driving'
+					},
+					{
+						destination: '33 Fort Street, Auckland CBD, Auckland',
+						label: 'BNZ Parking transit',
+						mode: 'Transit'
+					},
+					{
+						destination: 'Westfield Newmarket Broadway, Newmarket, Auckland',
+						label: 'Newmarket',
+						mode: 'Driving'
+					},
+					{
+						destination: 'The Boundary 5 Vitasovich Avenue, Henderson, Auckland 0612',
+						label: 'Kmart Henderson',
+						mode: 'Walking'
+					}
+				]
+			}
 		},
-		{}
-	]
 
 *********************************/
 
