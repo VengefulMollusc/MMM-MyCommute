@@ -354,6 +354,8 @@ Module.register("MMM-MyCommute", {
 			}
 			this.inWindow = true;
 
+			Log.log(destinationGetInfo);
+
 			if (destinationGetInfo.length > 0) {
 				this.sendSocketNotification("BING_TRAFFIC_GET", { destinations: destinationGetInfo, instanceId: this.identifier });
 			} else {
@@ -542,6 +544,7 @@ Module.register("MMM-MyCommute", {
 			routeNumber.innerHTML = transitInfo[i].routeLabel;
 
 			if (transitInfo[i].arrivalTime) {
+				// TODO: correct next depature time
 				routeNumber.innerHTML = routeNumber.innerHTML + " (" + moment(transitInfo[i].arrivalTime).format(this.config.nextTransitVehicleDepartureFormat) + ")";
 			}
 
