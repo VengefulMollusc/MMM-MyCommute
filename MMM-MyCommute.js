@@ -732,7 +732,7 @@ Module.register("MMM-MyCommute", {
 			const updatedRow = document.createElement("div");
 			updatedRow.classList.add("light");
 			updatedRow.classList.add("xsmall");
-			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat) + " (freq: " + this.calculatedPollFrequency + ")";
+			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat) + " (freq: " + this.calculatedPollFrequency.toString() + "ms)";
 			wrapper.appendChild(updatedRow);
 		}
 		this.lastWrapper = wrapper;
