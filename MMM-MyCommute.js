@@ -234,8 +234,8 @@ Module.register("MMM-MyCommute", {
 			const d = destinations[i];
 
 			// get active time according to start- and end-times (taking into account global start and end times)
-			const startTime = getEarliestOrLatestTime(d.startTime || "00:00", this.config.startTime, false);
-			const endTime = getEarliestOrLatestTime(d.endTime || "23:59", this.config.endTime, true);
+			const startTime = this.getEarliestOrLatestTime(d.startTime || "00:00", this.config.startTime, false);
+			const endTime = this.getEarliestOrLatestTime(d.endTime || "23:59", this.config.endTime, true);
 			const dailyDestActiveMins = endTime.diff(startTime, "minutes");
 
 			let totalDestActiveMins = 0;
@@ -257,7 +257,7 @@ Module.register("MMM-MyCommute", {
 		// divide by daily limit
 		const minsBetweenCalls = totalActiveMins/300;
 		
-		const frequency = minsBetweenCalls * 60 * 1000;
+		const frequency = Math.trunc(minsBetweenCalls * 60 * 1000);
 
 		// compare with max frequency
 		if (frequency < this.config.pollFrequency) {
@@ -620,6 +620,15 @@ Module.register("MMM-MyCommute", {
 		}
 	},
 
+	getPollFreqString: function () {
+		if (this.calculatedPollFrequency) {
+			const mins = Math.round(this.calculatedPollFrequency/6000)/10;
+			return " (freq: " + mins.toString() + "mins)";
+		} else {
+			return " (freq error)";
+		}
+	},
+
 	getHeader: function () {
 		var headerTitle = this.data.header;
 
@@ -632,11 +641,7 @@ Module.register("MMM-MyCommute", {
 				headerTitle += "no update received yet";
 			}
 
-			if (this.calculatedPollFrequency) {
-				headerTitle += " (freq: " + this.calculatedPollFrequency.toString() + "ms)";
-			} else {
-				headerTitle += " (freq error?)";
-			}
+			headerTitle += this.getPollFreqString();
 		}
 		return headerTitle;
 	},
@@ -739,12 +744,7 @@ Module.register("MMM-MyCommute", {
 			const updatedRow = document.createElement("div");
 			updatedRow.classList.add("light");
 			updatedRow.classList.add("xsmall");
-			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat);
-			if (this.calculatedPollFrequency) {
-				updatedRow.innerHTML += " (freq: " + this.calculatedPollFrequency.toString() + "ms)";
-			} else {
-				updatedRow.innerHTML += " (freq error?)";
-			}
+			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat) + this.getPollFreqString();
 			wrapper.appendChild(updatedRow);
 		}
 		this.lastWrapper = wrapper;
