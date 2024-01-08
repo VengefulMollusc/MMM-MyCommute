@@ -200,6 +200,66 @@ Module.register("MMM-MyCommute", {
 		this.rescheduleInterval();
 	},
 
+	getEarliestOrLatestTime: function (first, second, earliest) {
+		const firstSplit = first.split(":");
+		const secondSplit = second.split(":");
+		const firstMoment = moment().hour(firstSplit[0]).minute(firstSplit[1]);
+		const secondMoment = moment().hour(secondSplit[0]).minute(secondSplit[1]);
+		if (earliest) {
+			if (firstMoment.isBefore(secondMoment)) {
+				return firstMoment;
+			} else {
+				return secondMoment;
+			}
+		}
+		// latest
+		if (firstMoment.isAfter(secondMoment)) {
+			return firstMoment;
+		} else {
+			return secondMoment;
+		}
+	},
+
+	getPollFrequency: function () {
+		let totalActiveMins = 0;
+
+		const destinations = this.getDestinations();
+		for (let i = 0; i < destinations.length; i++) {
+			const d = destinations[i];
+
+			// get active time according to start- and end-times (taking into account global start and end times)
+			const startTime = getEarliestOrLatestTime(d.startTime || "00:00", this.config.startTime, false);
+			const endTime = getEarliestOrLatestTime(d.endTime || "23:59", this.config.endTime, true);
+			const dailyDestActiveMins = endTime.diff(startTime, "minutes");
+
+			let totalDestActiveMins = 0;
+			// check active days
+			const destHideDays = d.hideDays || [];
+			for (let j = 0; j <= 6; j++) {
+				// is day globally inactive or inactive for destination
+				if (this.config.hideDays.indexOf(i) !== -1 || destHideDays.indexOf(i) !== -1) {
+					continue;
+				}
+				// if day is active, add minutes
+				totalDestActiveMins += dailyDestActiveMins;
+			}
+
+			// add destination time to total active
+			totalActiveMins += totalDestActiveMins;
+		}
+
+		// divide by daily limit
+		const minsBetweenCalls = totalActiveMins/300;
+		
+		const frequency = minsBetweenCalls * 60 * 1000;
+
+		// compare with max frequency
+		if (frequency < this.config.pollFrequency) {
+			return this.config.pollFrequency;
+		}
+		return frequency;
+	},
+
 	rescheduleInterval: function () {
 		const self = this;
 		if (this.interval !== null) {
@@ -209,7 +269,7 @@ Module.register("MMM-MyCommute", {
 
 		this.interval = setInterval(function () {
 			self.getData();
-		}, this.config.pollFrequency);
+		}, getPollFrequency());
 	},
 
 	suspended: false,
