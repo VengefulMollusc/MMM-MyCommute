@@ -195,6 +195,8 @@ Module.register("MMM-MyCommute", {
 		this.inWindow = true;
 		this.isHidden = false;
 
+		// preform pre-calculations
+		this.getPollFrequency();
 		//start data poll
 		this.getData();
 		this.rescheduleInterval();
@@ -222,7 +224,7 @@ Module.register("MMM-MyCommute", {
 
 	getPollFrequency: function () {
 		if (this.calculatedPollFrequency) {
-			return this.calculatedPollFrequency;
+			return;
 		}
 
 		let totalActiveMins = 0;
@@ -263,7 +265,6 @@ Module.register("MMM-MyCommute", {
 		} else {
 			this.calculatedPollFrequency = frequency;
 		}
-		return this.calculatedPollFrequency;
 	},
 
 	rescheduleInterval: function () {
@@ -275,7 +276,7 @@ Module.register("MMM-MyCommute", {
 
 		this.interval = setInterval(function () {
 			self.getData();
-		}, getPollFrequency());
+		}, this.calculatedPollFrequency);
 	},
 
 	suspended: false,
@@ -293,7 +294,7 @@ Module.register("MMM-MyCommute", {
 		if (this.suspended) {
 			this.suspended = false;
 
-			if (new Date() - this.lastUpdate > getPollFrequency()) {
+			if (new Date() - this.lastUpdate > this.calculatedPollFrequency) {
 				// Last refresh, before suspend, is too old. Update now
 				this.getData();
 			}
@@ -630,6 +631,12 @@ Module.register("MMM-MyCommute", {
 			} else {
 				headerTitle += "no update received yet";
 			}
+
+			if (this.calculatedPollFrequency) {
+				headerTitle += " (freq: " + this.calculatedPollFrequency.toString() + "ms)";
+			} else {
+				headerTitle += " (freq error?)";
+			}
 		}
 		return headerTitle;
 	},
@@ -732,7 +739,12 @@ Module.register("MMM-MyCommute", {
 			const updatedRow = document.createElement("div");
 			updatedRow.classList.add("light");
 			updatedRow.classList.add("xsmall");
-			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat) + " (freq: " + this.calculatedPollFrequency.toString() + "ms)";
+			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat);
+			if (this.calculatedPollFrequency) {
+				updatedRow.innerHTML += " (freq: " + this.calculatedPollFrequency.toString() + "ms)";
+			} else {
+				updatedRow.innerHTML += " (freq error?)";
+			}
 			wrapper.appendChild(updatedRow);
 		}
 		this.lastWrapper = wrapper;
