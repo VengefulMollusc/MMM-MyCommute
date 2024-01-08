@@ -221,6 +221,10 @@ Module.register("MMM-MyCommute", {
 	},
 
 	getPollFrequency: function () {
+		if (this.calculatedPollFrequency) {
+			return this.calculatedPollFrequency;
+		}
+
 		let totalActiveMins = 0;
 
 		const destinations = this.getDestinations();
@@ -255,9 +259,11 @@ Module.register("MMM-MyCommute", {
 
 		// compare with max frequency
 		if (frequency < this.config.pollFrequency) {
-			return this.config.pollFrequency;
+			this.calculatedPollFrequency = this.config.pollFrequency;
+		} else {
+			this.calculatedPollFrequency = frequency;
 		}
-		return frequency;
+		return this.calculatedPollFrequency;
 	},
 
 	rescheduleInterval: function () {
@@ -287,7 +293,7 @@ Module.register("MMM-MyCommute", {
 		if (this.suspended) {
 			this.suspended = false;
 
-			if (new Date() - this.lastUpdate > this.config.pollFrequency) {
+			if (new Date() - this.lastUpdate > getPollFrequency()) {
 				// Last refresh, before suspend, is too old. Update now
 				this.getData();
 			}
@@ -726,7 +732,7 @@ Module.register("MMM-MyCommute", {
 			const updatedRow = document.createElement("div");
 			updatedRow.classList.add("light");
 			updatedRow.classList.add("xsmall");
-			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat);
+			updatedRow.innerHTML = this.translate("LAST_REFRESHED") + this.lastUpdated.format(this.config.shortTimeFormat) + " (freq: " + this.calculatedPollFrequency + ")";
 			wrapper.appendChild(updatedRow);
 		}
 		this.lastWrapper = wrapper;
