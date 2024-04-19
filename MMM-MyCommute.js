@@ -243,7 +243,7 @@ Module.register("MMM-MyCommute", {
 			const destHideDays = d.hideDays || [];
 			for (let j = 0; j <= 6; j++) {
 				// is day globally inactive or inactive for destination
-				if (this.config.hideDays.indexOf(i) !== -1 || destHideDays.indexOf(i) !== -1) {
+				if (this.config.hideDays.indexOf(j) !== -1 || destHideDays.indexOf(j) !== -1) {
 					continue;
 				}
 				// if day is active, add minutes
@@ -254,8 +254,11 @@ Module.register("MMM-MyCommute", {
 			totalActiveMins += totalDestActiveMins;
 		}
 
+		// TODO: make sure I am taking into account week vs day limits correctly
 		// divide by daily limit
-		const minsBetweenCalls = totalActiveMins/300;
+		const minsBetweenCalls = totalActiveMins/this.config.dailyReqCap;
+
+		console.log(totalActiveMins + "mins/week total - " + minsBetweenCalls + "mins between calls");
 		
 		const frequency = Math.trunc(minsBetweenCalls * 60 * 1000);
 
@@ -426,14 +429,22 @@ Module.register("MMM-MyCommute", {
 			if (destinationGetInfo.length > 0) {
 				this.sendSocketNotification("BING_TRAFFIC_GET", { destinations: destinationGetInfo, instanceId: this.identifier });
 			} else {
-				this.hide(1000, { lockString: this.identifier });
+				this.hide(
+					1000, 
+					console.log("hiding " + this.name + " due to no current destinations"),
+					{ lockString: this.identifier }
+				);
 				this.inWindow = false;
 				this.isHidden = true;
 			}
 
 			this.lastUpdate = new Date();
 		} else {
-			this.hide(1000, { lockString: this.identifier });
+			this.hide(
+				1000, 
+				console.log("hiding " + this.name + " due to outside global active window"),
+				{ lockString: this.identifier }
+			);
 			this.inWindow = false;
 			this.isHidden = true;
 		}
@@ -760,14 +771,22 @@ Module.register("MMM-MyCommute", {
 				this.loading = false;
 				if (this.isHidden) {
 					this.updateDom();
-					this.show(1000, { lockString: this.identifier });
+					this.show(
+						1000, 
+						console.log("showing " + this.name + " (and this.loading)"),
+						{ lockString: this.identifier }
+					);
 				} else {
 					this.updateDom(1000);
 				}
 			} else {
 				this.updateDom();
 				if (this.isHidden) {
-					this.show(1000, { lockString: this.identifier });
+					this.show(
+						1000, 
+						console.log("showing " + this.name),
+						{ lockString: this.identifier }
+					);
 				}
 			}
 			this.isHidden = false;
@@ -776,7 +795,11 @@ Module.register("MMM-MyCommute", {
 
 	notificationReceived: function (notification, payload) {
 		if (notification === "DOM_OBJECTS_CREATED" && !this.inWindow) {
-			this.hide(0, { lockString: this.identifier });
+			this.hide(
+				0, 
+				console.log("hiding " + this.name),
+				{ lockString: this.identifier }
+			);
 			this.isHidden = true;
 		} else if (notification === "CALENDAR_EVENTS") {
 			this.setAppointmentDestinations(payload);
