@@ -77,7 +77,11 @@ Module.register("MMM-MyCommute", {
 		travelTimeFormat: "m [min]",
 		travelTimeFormatTrim: "left",
 		shortTimeFormat: "HH:mm",
-		pollFrequency: 10 * 60 * 1000, //every ten minutes, in milliseconds
+		// note: need to keep poll total to ~300 per day to stay in API cap
+		dailyReqCap: 300, // do not set this to >300
+		// pollFrequency option has been altered to act as a MIN interval
+		// code will calc based on 300 reqs per day and compare
+		pollFrequency: 10 * 60 * 1000, // 10 * 60 * 1000 = every ten minutes, in milliseconds
 		maxCalendarEvents: 0,
 		maxCalendarTime: 24 * 60 * 60 * 1000,
 		calendarOptions: [{ mode: "driving", maxLabelLength: 25 }],
@@ -227,6 +231,7 @@ Module.register("MMM-MyCommute", {
 			return;
 		}
 
+		console.log(this.name + " calculating poll frequency");
 		let totalActiveMins = 0;
 
 		const destinations = this.getDestinations();
@@ -250,15 +255,16 @@ Module.register("MMM-MyCommute", {
 				totalDestActiveMins += dailyDestActiveMins;
 			}
 
+			console.log(d.label + ": " + dailyDestActiveMins + "mins/day " + totalDestActiveMins + "mins/week");
 			// add destination time to total active
 			totalActiveMins += totalDestActiveMins;
 		}
 
-		// TODO: make sure I am taking into account week vs day limits correctly
-		// divide by daily limit
-		const minsBetweenCalls = totalActiveMins/this.config.dailyReqCap;
+		// calculate daily call limit
+		const minsPerDay = totalActiveMins/7;
+		const minsBetweenCalls = minsPerDay/this.config.dailyReqCap;
 
-		console.log(totalActiveMins + "mins/week total - " + minsBetweenCalls + "mins between calls");
+		console.log(totalActiveMins + "mins/week total - " + minsPerDay.toFixed(2) + "mins/day - " + minsBetweenCalls.toFixed(2) + "mins between calls");
 		
 		const frequency = Math.trunc(minsBetweenCalls * 60 * 1000);
 
