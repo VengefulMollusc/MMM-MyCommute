@@ -294,7 +294,7 @@ Module.register("MMM-MyCommute", {
 		Log.log(this.name + " suspended");
 		if (!this.suspended) {
 			this.suspended = true;
-			clearInterval(this.interval);
+			// clearInterval(this.interval); // commented this so it will keep checking, and eventually resume
 		}
 	},
 
